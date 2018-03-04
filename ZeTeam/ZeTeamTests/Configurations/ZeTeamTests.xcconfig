@@ -1,0 +1,8 @@
+
+#include "../../Configurations/Platforms/iOS.xcconfig"
+#include "../../Configurations/Targets/Test.xcconfig"
+
+INFOPLIST_FILE = ZeTeamTests/Configurations/Info.plist
+DEVELOPMENT_TEAM = W46A5HMB5C
+PRODUCT_BUNDLE_IDENTIFIER = com.zuhlke.ZeTeamTests
+TEST_HOST = $(BUILT_PRODUCTS_DIR)/ZeTeam.app/ZeTeam

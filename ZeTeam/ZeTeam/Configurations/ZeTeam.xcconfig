@@ -1,0 +1,12 @@
+
+#include "../../Configurations/Platforms/iOS.xcconfig"
+#include "../../Configurations/Targets/App.xcconfig"
+
+VERSION = 1.0
+BUILD_NUMBER = 1
+
+PRODUCT_BUNDLE_IDENTIFIER = com.zuhlke.ze-team
+DEVELOPMENT_TEAM = W46A5HMB5C
+INFOPLIST_FILE = ZeTeam/Configurations/Info.plist
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
+

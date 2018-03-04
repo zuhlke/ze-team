@@ -1,0 +1,8 @@
+
+#include "../../Configurations/Platforms/iOS.xcconfig"
+#include "../../Configurations/Targets/UITest.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = com.zuhlke.ZeTeam
+DEVELOPMENT_TEAM = W46A5HMB5C
+INFOPLIST_FILE = ZeTeamUITests/Configurations/Info.plist
+TEST_TARGET_NAME = ZeTeam

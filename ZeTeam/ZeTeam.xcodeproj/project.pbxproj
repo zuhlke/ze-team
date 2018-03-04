@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8910881B1F4F14E6004148A4 /* AAZuehlke-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 891088181F4F14AA004148A4 /* AAZuehlke-italic.ttf */; };
+		8910881C1F4F14E6004148A4 /* AAZuehlke.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 891088191F4F14AA004148A4 /* AAZuehlke.ttf */; };
+		8910881D1F4F14E6004148A4 /* AAZuehlkeMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8910881A1F4F14AA004148A4 /* AAZuehlkeMedium.ttf */; };
+		892002891F61485200D5D001 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; };
+		8920028A1F61485200D5D001 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8920028B1F61485200D5D001 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
+		8920028C1F61485200D5D001 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4291F2B3FF600A3E463 /* AppDelegate.swift */; };
+		8947A4311F2B3FF600A3E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4301F2B3FF600A3E463 /* Assets.xcassets */; };
+		8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */; };
+		8947A43F1F2B3FF600A3E463 /* ZeTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A43E1F2B3FF600A3E463 /* ZeTeamTests.swift */; };
+		8947A44A1F2B3FF600A3E463 /* ZeTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */; };
+		89E39B431FC1D7860038958D /* Content in Resources */ = {isa = PBXBuildFile; fileRef = 89E39B421FC1D7860038958D /* Content */; };
+		89E39B4E1FC1DA050038958D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; };
+		89E39B4F1FC1DA050038958D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
+		8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29E6A21F50CC7900F259AE /* Bundle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8947A43B1F2B3FF600A3E463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8947A41E1F2B3FF600A3E463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8947A4251F2B3FF600A3E463;
+			remoteInfo = ZeTeam;
+		};
+		8947A4461F2B3FF600A3E463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8947A41E1F2B3FF600A3E463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8947A4251F2B3FF600A3E463;
+			remoteInfo = ZeTeam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07D0B07F1F439E3800CD1413 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8920028C1F61485200D5D001 /* RxSwift.framework in Embed Frameworks */,
+				8920028A1F61485200D5D001 /* RxCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		891088181F4F14AA004148A4 /* AAZuehlke-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AAZuehlke-italic.ttf"; sourceTree = "<group>"; };
+		891088191F4F14AA004148A4 /* AAZuehlke.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AAZuehlke.ttf; sourceTree = "<group>"; };
+		8910881A1F4F14AA004148A4 /* AAZuehlkeMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AAZuehlkeMedium.ttf; sourceTree = "<group>"; };
+		8947A4261F2B3FF600A3E463 /* ZeTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8947A4291F2B3FF600A3E463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8947A4301F2B3FF600A3E463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8947A4331F2B3FF600A3E463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8947A4351F2B3FF600A3E463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8947A43A1F2B3FF600A3E463 /* ZeTeamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeTeamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8947A43E1F2B3FF600A3E463 /* ZeTeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeTeamTests.swift; sourceTree = "<group>"; };
+		8947A4401F2B3FF600A3E463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8947A4451F2B3FF600A3E463 /* ZeTeamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeTeamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeTeamUITests.swift; sourceTree = "<group>"; };
+		8947A44B1F2B3FF600A3E463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		898366281F2B48F1007AA57A /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ZeTeam.xcconfig; sourceTree = "<group>"; };
+		8983662F1F2B4B7E007AA57A /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		898366301F2B4B7E007AA57A /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		898366311F2B4B7E007AA57A /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
+		898366321F2B4B7E007AA57A /* iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = iOS.xcconfig; sourceTree = "<group>"; };
+		898366331F2B4B7E007AA57A /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		898366341F2B4B7E007AA57A /* OSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OSX.xcconfig; sourceTree = "<group>"; };
+		898366351F2B4B7E007AA57A /* App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.xcconfig; sourceTree = "<group>"; };
+		898366391F2B4D0A007AA57A /* ZeTeamTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ZeTeamTests.xcconfig; sourceTree = "<group>"; };
+		8983663A1F2B4EB5007AA57A /* ZeTeamUITests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ZeTeamUITests.xcconfig; sourceTree = "<group>"; };
+		8983663B1F2B4F32007AA57A /* UITest.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UITest.xcconfig; sourceTree = "<group>"; };
+		89C7474A1F6147FB00AB24BC /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C7474B1F6147FB00AB24BC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89E39B421FC1D7860038958D /* Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Content; sourceTree = "<group>"; };
+		8B29E6A21F50CC7900F259AE /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8947A4231F2B3FF600A3E463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8920028B1F61485200D5D001 /* RxSwift.framework in Frameworks */,
+				892002891F61485200D5D001 /* RxCocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8947A4371F2B3FF600A3E463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89E39B4F1FC1DA050038958D /* RxSwift.framework in Frameworks */,
+				89E39B4E1FC1DA050038958D /* RxCocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8947A4421F2B3FF600A3E463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07F949E21FE167D0008A7BC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8B29E6A21F50CC7900F259AE /* Bundle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		891088151F4F14AA004148A4 /* ze-camp-assets */ = {
+			isa = PBXGroup;
+			children = (
+				8947A4301F2B3FF600A3E463 /* Assets.xcassets */,
+				891088171F4F14AA004148A4 /* Fonts */,
+			);
+			name = "ze-camp-assets";
+			path = "../Carthage/Checkouts/ze-camp-assets";
+			sourceTree = "<group>";
+		};
+		891088171F4F14AA004148A4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				891088181F4F14AA004148A4 /* AAZuehlke-italic.ttf */,
+				891088191F4F14AA004148A4 /* AAZuehlke.ttf */,
+				8910881A1F4F14AA004148A4 /* AAZuehlkeMedium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8926091F1F60310900DB78E1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				07F949E21FE167D0008A7BC6 /* Extensions */,
+				8947A4291F2B3FF600A3E463 /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		892609331F60317900DB78E1 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				8947A4351F2B3FF600A3E463 /* Info.plist */,
+				8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		892609341F6031F500DB78E1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8947A43E1F2B3FF600A3E463 /* ZeTeamTests.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		892609351F6031FD00DB78E1 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				8947A4401F2B3FF600A3E463 /* Info.plist */,
+				898366391F2B4D0A007AA57A /* ZeTeamTests.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		892609361F60320800DB78E1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		892609371F60321100DB78E1 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				8947A44B1F2B3FF600A3E463 /* Info.plist */,
+				8983663A1F2B4EB5007AA57A /* ZeTeamUITests.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		892609391F60333100DB78E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8947A41D1F2B3FF600A3E463 = {
+			isa = PBXGroup;
+			children = (
+				8947A4281F2B3FF600A3E463 /* ZeTeam */,
+				8947A43D1F2B3FF600A3E463 /* ZeTeamTests */,
+				8947A4481F2B3FF600A3E463 /* ZeTeamUITests */,
+				891088151F4F14AA004148A4 /* ze-camp-assets */,
+				898366211F2B48BF007AA57A /* Configurations */,
+				8947A4271F2B3FF600A3E463 /* Products */,
+				89C747451F6147B700AB24BC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8947A4271F2B3FF600A3E463 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8947A4261F2B3FF600A3E463 /* ZeTeam.app */,
+				8947A43A1F2B3FF600A3E463 /* ZeTeamTests.xctest */,
+				8947A4451F2B3FF600A3E463 /* ZeTeamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8947A4281F2B3FF600A3E463 /* ZeTeam */ = {
+			isa = PBXGroup;
+			children = (
+				8926091F1F60310900DB78E1 /* Sources */,
+				892609391F60333100DB78E1 /* Resources */,
+				892609331F60317900DB78E1 /* Configurations */,
+			);
+			path = ZeTeam;
+			sourceTree = "<group>";
+		};
+		8947A43D1F2B3FF600A3E463 /* ZeTeamTests */ = {
+			isa = PBXGroup;
+			children = (
+				892609341F6031F500DB78E1 /* Sources */,
+				89E39B411FC1D7650038958D /* Resources */,
+				892609351F6031FD00DB78E1 /* Configurations */,
+			);
+			path = ZeTeamTests;
+			sourceTree = "<group>";
+		};
+		8947A4481F2B3FF600A3E463 /* ZeTeamUITests */ = {
+			isa = PBXGroup;
+			children = (
+				892609361F60320800DB78E1 /* Sources */,
+				892609371F60321100DB78E1 /* Configurations */,
+			);
+			path = ZeTeamUITests;
+			sourceTree = "<group>";
+		};
+		898366211F2B48BF007AA57A /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				898366281F2B48F1007AA57A /* Project.xcconfig */,
+				898366361F2B4B84007AA57A /* Configurations */,
+				898366381F2B4BAD007AA57A /* Platforms */,
+				898366371F2B4BA5007AA57A /* Targets */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		898366361F2B4B84007AA57A /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				898366301F2B4B7E007AA57A /* Debug.xcconfig */,
+				8983662F1F2B4B7E007AA57A /* Release.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		898366371F2B4BA5007AA57A /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				898366351F2B4B7E007AA57A /* App.xcconfig */,
+				898366311F2B4B7E007AA57A /* Framework.xcconfig */,
+				898366331F2B4B7E007AA57A /* Test.xcconfig */,
+				8983663B1F2B4F32007AA57A /* UITest.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		898366381F2B4BAD007AA57A /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				898366321F2B4B7E007AA57A /* iOS.xcconfig */,
+				898366341F2B4B7E007AA57A /* OSX.xcconfig */,
+			);
+			path = Platforms;
+			sourceTree = "<group>";
+		};
+		89C747451F6147B700AB24BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89C7474A1F6147FB00AB24BC /* RxCocoa.framework */,
+				89C7474B1F6147FB00AB24BC /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89E39B411FC1D7650038958D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				89E39B421FC1D7860038958D /* Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8947A4251F2B3FF600A3E463 /* ZeTeam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8947A44E1F2B3FF600A3E463 /* Build configuration list for PBXNativeTarget "ZeTeam" */;
+			buildPhases = (
+				8947A4221F2B3FF600A3E463 /* Sources */,
+				8947A4231F2B3FF600A3E463 /* Frameworks */,
+				8947A4241F2B3FF600A3E463 /* Resources */,
+				8B29E6A11F50C53B00F259AE /* Embed build information */,
+				07D0B07F1F439E3800CD1413 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZeTeam;
+			productName = ZeTeam;
+			productReference = 8947A4261F2B3FF600A3E463 /* ZeTeam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8947A4391F2B3FF600A3E463 /* ZeTeamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8947A4511F2B3FF600A3E463 /* Build configuration list for PBXNativeTarget "ZeTeamTests" */;
+			buildPhases = (
+				8947A4361F2B3FF600A3E463 /* Sources */,
+				8947A4371F2B3FF600A3E463 /* Frameworks */,
+				8947A4381F2B3FF600A3E463 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8947A43C1F2B3FF600A3E463 /* PBXTargetDependency */,
+			);
+			name = ZeTeamTests;
+			productName = ZeTeamTests;
+			productReference = 8947A43A1F2B3FF600A3E463 /* ZeTeamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8947A4441F2B3FF600A3E463 /* ZeTeamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8947A4541F2B3FF600A3E463 /* Build configuration list for PBXNativeTarget "ZeTeamUITests" */;
+			buildPhases = (
+				8947A4411F2B3FF600A3E463 /* Sources */,
+				8947A4421F2B3FF600A3E463 /* Frameworks */,
+				8947A4431F2B3FF600A3E463 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8947A4471F2B3FF600A3E463 /* PBXTargetDependency */,
+			);
+			name = ZeTeamUITests;
+			productName = ZeTeamUITests;
+			productReference = 8947A4451F2B3FF600A3E463 /* ZeTeamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8947A41E1F2B3FF600A3E463 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Zuhlke;
+				TargetAttributes = {
+					8947A4251F2B3FF600A3E463 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					8947A4391F2B3FF600A3E463 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8947A4251F2B3FF600A3E463;
+					};
+					8947A4441F2B3FF600A3E463 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8947A4251F2B3FF600A3E463;
+					};
+				};
+			};
+			buildConfigurationList = 8947A4211F2B3FF600A3E463 /* Build configuration list for PBXProject "ZeTeam" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+			);
+			mainGroup = 8947A41D1F2B3FF600A3E463;
+			productRefGroup = 8947A4271F2B3FF600A3E463 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8947A4251F2B3FF600A3E463 /* ZeTeam */,
+				8947A4391F2B3FF600A3E463 /* ZeTeamTests */,
+				8947A4441F2B3FF600A3E463 /* ZeTeamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8947A4241F2B3FF600A3E463 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8910881C1F4F14E6004148A4 /* AAZuehlke.ttf in Resources */,
+				8910881D1F4F14E6004148A4 /* AAZuehlkeMedium.ttf in Resources */,
+				8910881B1F4F14E6004148A4 /* AAZuehlke-italic.ttf in Resources */,
+				8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */,
+				8947A4311F2B3FF600A3E463 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8947A4381F2B3FF600A3E463 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89E39B431FC1D7860038958D /* Content in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8947A4431F2B3FF600A3E463 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B29E6A11F50C53B00F259AE /* Embed build information */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed build information";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"${SRCROOT}/../scripts/embedBuildInfo.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8947A4221F2B3FF600A3E463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */,
+				8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8947A4361F2B3FF600A3E463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8947A43F1F2B3FF600A3E463 /* ZeTeamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8947A4411F2B3FF600A3E463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8947A44A1F2B3FF600A3E463 /* ZeTeamUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8947A43C1F2B3FF600A3E463 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8947A4251F2B3FF600A3E463 /* ZeTeam */;
+			targetProxy = 8947A43B1F2B3FF600A3E463 /* PBXContainerItemProxy */;
+		};
+		8947A4471F2B3FF600A3E463 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8947A4251F2B3FF600A3E463 /* ZeTeam */;
+			targetProxy = 8947A4461F2B3FF600A3E463 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8947A4331F2B3FF600A3E463 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8947A44C1F2B3FF600A3E463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898366301F2B4B7E007AA57A /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		8947A44D1F2B3FF600A3E463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8983662F1F2B4B7E007AA57A /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		8947A44F1F2B3FF600A3E463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		8947A4501F2B3FF600A3E463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		8947A4521F2B3FF600A3E463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898366391F2B4D0A007AA57A /* ZeTeamTests.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		8947A4531F2B3FF600A3E463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898366391F2B4D0A007AA57A /* ZeTeamTests.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		8947A4551F2B3FF600A3E463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8983663A1F2B4EB5007AA57A /* ZeTeamUITests.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		8947A4561F2B3FF600A3E463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8983663A1F2B4EB5007AA57A /* ZeTeamUITests.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8947A4211F2B3FF600A3E463 /* Build configuration list for PBXProject "ZeTeam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8947A44C1F2B3FF600A3E463 /* Debug */,
+				8947A44D1F2B3FF600A3E463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8947A44E1F2B3FF600A3E463 /* Build configuration list for PBXNativeTarget "ZeTeam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8947A44F1F2B3FF600A3E463 /* Debug */,
+				8947A4501F2B3FF600A3E463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8947A4511F2B3FF600A3E463 /* Build configuration list for PBXNativeTarget "ZeTeamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8947A4521F2B3FF600A3E463 /* Debug */,
+				8947A4531F2B3FF600A3E463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8947A4541F2B3FF600A3E463 /* Build configuration list for PBXNativeTarget "ZeTeamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8947A4551F2B3FF600A3E463 /* Debug */,
+				8947A4561F2B3FF600A3E463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8947A41E1F2B3FF600A3E463 /* Project object */;
+}
