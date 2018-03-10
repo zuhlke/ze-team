@@ -20,6 +20,7 @@
 		8947A43F1F2B3FF600A3E463 /* ZeTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A43E1F2B3FF600A3E463 /* ZeTeamTests.swift */; };
 		8947A44A1F2B3FF600A3E463 /* ZeTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */; };
 		895E896B20548023000C374C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E896A20548023000C374C /* Team.swift */; };
+		895E897420548384000C374C /* TeamsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897320548384000C374C /* TeamsListViewController.swift */; };
 		89E39B431FC1D7860038958D /* Content in Resources */ = {isa = PBXBuildFile; fileRef = 89E39B421FC1D7860038958D /* Content */; };
 		89E39B4E1FC1DA050038958D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; };
 		89E39B4F1FC1DA050038958D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
@@ -74,6 +75,7 @@
 		8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeTeamUITests.swift; sourceTree = "<group>"; };
 		8947A44B1F2B3FF600A3E463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		895E896A20548023000C374C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		895E897320548384000C374C /* TeamsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListViewController.swift; sourceTree = "<group>"; };
 		898366281F2B48F1007AA57A /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ZeTeam.xcconfig; sourceTree = "<group>"; };
 		8983662F1F2B4B7E007AA57A /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -152,8 +154,9 @@
 		8926091F1F60310900DB78E1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				895E896820547FF3000C374C /* Logic */,
 				07F949E21FE167D0008A7BC6 /* Extensions */,
+				895E896820547FF3000C374C /* Logic */,
+				895E897220548304000C374C /* UserInterface */,
 				8947A4291F2B3FF600A3E463 /* AppDelegate.swift */,
 			);
 			path = Sources;
@@ -276,6 +279,14 @@
 				895E896A20548023000C374C /* Team.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		895E897220548304000C374C /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				895E897320548384000C374C /* TeamsListViewController.swift */,
+			);
+			path = UserInterface;
 			sourceTree = "<group>";
 		};
 		898366211F2B48BF007AA57A /* Configurations */ = {
@@ -491,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				895E896B20548023000C374C /* Team.swift in Sources */,
+				895E897420548384000C374C /* TeamsListViewController.swift in Sources */,
 				8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */,
 				8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */,
 			);
