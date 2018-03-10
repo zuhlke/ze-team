@@ -25,11 +25,11 @@ extension XCTestCase {
             return remainingVerifiers.remove(at: 0)
         }
         
-        var pendingError: Error?
+        var pendingErrors = [Error]()
         var terminated = false
         
         let shouldWait = { () -> Bool in
-            guard pendingError == nil && !timeout.hasTimedOut else {
+            guard pendingErrors.isEmpty && !timeout.hasTimedOut else {
                 return false
             }
             guard remainingVerifiers.isEmpty else {
@@ -47,7 +47,7 @@ extension XCTestCase {
                 do {
                     try nextVerifier().verify(snapshot)
                 } catch {
-                    pendingError = error
+                    pendingErrors.append(error)
                 }
         }
         
@@ -63,14 +63,19 @@ extension XCTestCase {
         
         disposable.dispose()
         
-        if let pendingError = pendingError {
-            // don’t throw error if we’re matching prefix and error is about count
+        let firstUnacceptableError = pendingErrors.first(where: { pendingError in
             guard
                 options.contains(.doNotWaitForTermination),
                 let e = pendingError as? SnapshotVerifierErrors,
                 case .notEnoughVerifiers = e else {
-                    throw pendingError
+                    return true
             }
+            // don’t throw error if we’re matching prefix and error is about count
+            return false
+        })
+        
+        if let firstUnacceptableError = firstUnacceptableError {
+            throw firstUnacceptableError
         }
         
         guard terminated || options.contains(.doNotWaitForTermination) else {
