@@ -19,6 +19,7 @@
 		8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */; };
 		8947A43F1F2B3FF600A3E463 /* ZeTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A43E1F2B3FF600A3E463 /* ZeTeamTests.swift */; };
 		8947A44A1F2B3FF600A3E463 /* ZeTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */; };
+		895E896B20548023000C374C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E896A20548023000C374C /* Team.swift */; };
 		89E39B431FC1D7860038958D /* Content in Resources */ = {isa = PBXBuildFile; fileRef = 89E39B421FC1D7860038958D /* Content */; };
 		89E39B4E1FC1DA050038958D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; };
 		89E39B4F1FC1DA050038958D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
@@ -72,6 +73,7 @@
 		8947A4451F2B3FF600A3E463 /* ZeTeamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeTeamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeTeamUITests.swift; sourceTree = "<group>"; };
 		8947A44B1F2B3FF600A3E463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		895E896A20548023000C374C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		898366281F2B48F1007AA57A /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ZeTeam.xcconfig; sourceTree = "<group>"; };
 		8983662F1F2B4B7E007AA57A /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		8926091F1F60310900DB78E1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				895E896820547FF3000C374C /* Logic */,
 				07F949E21FE167D0008A7BC6 /* Extensions */,
 				8947A4291F2B3FF600A3E463 /* AppDelegate.swift */,
 			);
@@ -257,6 +260,22 @@
 				892609371F60321100DB78E1 /* Configurations */,
 			);
 			path = ZeTeamUITests;
+			sourceTree = "<group>";
+		};
+		895E896820547FF3000C374C /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				895E89692054800B000C374C /* Data */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		895E89692054800B000C374C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				895E896A20548023000C374C /* Team.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		898366211F2B48BF007AA57A /* Configurations */ = {
@@ -471,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895E896B20548023000C374C /* Team.swift in Sources */,
 				8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */,
 				8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */,
 			);
