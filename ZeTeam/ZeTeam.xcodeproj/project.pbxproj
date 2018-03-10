@@ -21,6 +21,15 @@
 		8947A44A1F2B3FF600A3E463 /* ZeTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */; };
 		895E896B20548023000C374C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E896A20548023000C374C /* Team.swift */; };
 		895E897420548384000C374C /* TeamsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897320548384000C374C /* TeamsListViewController.swift */; };
+		895E897620548C2F000C374C /* TeamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897520548C2F000C374C /* TeamStore.swift */; };
+		895E897A20548CEF000C374C /* WritableResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897920548CEF000C374C /* WritableResource.swift */; };
+		895E897C20548F2A000C374C /* TeamStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897B20548F2A000C374C /* TeamStoreTests.swift */; };
+		895E898420549028000C374C /* XCTestCaseObservableSnapshotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897E20549028000C374C /* XCTestCaseObservableSnapshotsTests.swift */; };
+		895E898520549028000C374C /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897F20549028000C374C /* Snapshot.swift */; };
+		895E898620549028000C374C /* SnapshotVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E898020549028000C374C /* SnapshotVerifier.swift */; };
+		895E898720549028000C374C /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E898120549028000C374C /* XCTestCase.swift */; };
+		895E898820549028000C374C /* TimeoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E898220549028000C374C /* TimeoutProvider.swift */; };
+		895E898920549028000C374C /* SnapshotVerifierErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E898320549028000C374C /* SnapshotVerifierErrors.swift */; };
 		89E39B431FC1D7860038958D /* Content in Resources */ = {isa = PBXBuildFile; fileRef = 89E39B421FC1D7860038958D /* Content */; };
 		89E39B4E1FC1DA050038958D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; };
 		89E39B4F1FC1DA050038958D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
@@ -76,6 +85,15 @@
 		8947A44B1F2B3FF600A3E463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		895E896A20548023000C374C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		895E897320548384000C374C /* TeamsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListViewController.swift; sourceTree = "<group>"; };
+		895E897520548C2F000C374C /* TeamStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStore.swift; sourceTree = "<group>"; };
+		895E897920548CEF000C374C /* WritableResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableResource.swift; sourceTree = "<group>"; };
+		895E897B20548F2A000C374C /* TeamStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStoreTests.swift; sourceTree = "<group>"; };
+		895E897E20549028000C374C /* XCTestCaseObservableSnapshotsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCaseObservableSnapshotsTests.swift; sourceTree = "<group>"; };
+		895E897F20549028000C374C /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		895E898020549028000C374C /* SnapshotVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotVerifier.swift; sourceTree = "<group>"; };
+		895E898120549028000C374C /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		895E898220549028000C374C /* TimeoutProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeoutProvider.swift; sourceTree = "<group>"; };
+		895E898320549028000C374C /* SnapshotVerifierErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotVerifierErrors.swift; sourceTree = "<group>"; };
 		898366281F2B48F1007AA57A /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ZeTeam.xcconfig; sourceTree = "<group>"; };
 		8983662F1F2B4B7E007AA57A /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -175,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				8947A43E1F2B3FF600A3E463 /* ZeTeamTests.swift */,
+				895E897B20548F2A000C374C /* TeamStoreTests.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -249,6 +268,7 @@
 		8947A43D1F2B3FF600A3E463 /* ZeTeamTests */ = {
 			isa = PBXGroup;
 			children = (
+				895E897D20549028000C374C /* Rx */,
 				892609341F6031F500DB78E1 /* Sources */,
 				89E39B411FC1D7650038958D /* Resources */,
 				892609351F6031FD00DB78E1 /* Configurations */,
@@ -268,7 +288,9 @@
 		895E896820547FF3000C374C /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				895E897820548CE0000C374C /* IO */,
 				895E89692054800B000C374C /* Data */,
+				895E897720548C33000C374C /* Stores */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -287,6 +309,35 @@
 				895E897320548384000C374C /* TeamsListViewController.swift */,
 			);
 			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		895E897720548C33000C374C /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				895E897520548C2F000C374C /* TeamStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		895E897820548CE0000C374C /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				895E897920548CEF000C374C /* WritableResource.swift */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		895E897D20549028000C374C /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				895E897E20549028000C374C /* XCTestCaseObservableSnapshotsTests.swift */,
+				895E897F20549028000C374C /* Snapshot.swift */,
+				895E898020549028000C374C /* SnapshotVerifier.swift */,
+				895E898120549028000C374C /* XCTestCase.swift */,
+				895E898220549028000C374C /* TimeoutProvider.swift */,
+				895E898320549028000C374C /* SnapshotVerifierErrors.swift */,
+			);
+			path = Rx;
 			sourceTree = "<group>";
 		};
 		898366211F2B48BF007AA57A /* Configurations */ = {
@@ -503,8 +554,10 @@
 			files = (
 				895E896B20548023000C374C /* Team.swift in Sources */,
 				895E897420548384000C374C /* TeamsListViewController.swift in Sources */,
+				895E897A20548CEF000C374C /* WritableResource.swift in Sources */,
 				8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */,
 				8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */,
+				895E897620548C2F000C374C /* TeamStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +565,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895E898920549028000C374C /* SnapshotVerifierErrors.swift in Sources */,
+				895E897C20548F2A000C374C /* TeamStoreTests.swift in Sources */,
+				895E898520549028000C374C /* Snapshot.swift in Sources */,
 				8947A43F1F2B3FF600A3E463 /* ZeTeamTests.swift in Sources */,
+				895E898420549028000C374C /* XCTestCaseObservableSnapshotsTests.swift in Sources */,
+				895E898820549028000C374C /* TimeoutProvider.swift in Sources */,
+				895E898720549028000C374C /* XCTestCase.swift in Sources */,
+				895E898620549028000C374C /* SnapshotVerifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
