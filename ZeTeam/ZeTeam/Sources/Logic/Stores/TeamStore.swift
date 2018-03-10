@@ -14,7 +14,9 @@ final class TeamStore {
     }
     
     func add(_ team: Team) {
-        
+        var current = try! _teams.value()
+        current.append(team)
+        _teams.onNext(current)
     }
     
 }
