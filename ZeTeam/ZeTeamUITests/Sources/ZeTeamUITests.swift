@@ -12,7 +12,7 @@ class ZeTeamUITests: XCTestCase {
     func testThatTheAppShowsTheWelcomeMessage() {
         let app = XCUIApplication()
         
-        XCTAssertTrue(app.staticTexts["Welcome to ZeTeam!"].exists)
+        XCTAssertTrue(app.navigationBars["Teams"].exists)
     }
     
 }

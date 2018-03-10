@@ -12,8 +12,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window.tintColor = UIColor(named: "teal")
         
-        let viewController = TeamsListViewController()
-        window.rootViewController = viewController
+        let viewController = TeamsListViewController(teams: [
+            Team(name: "Mobile"),
+            Team(name: "Site Reliability Engineering"),
+            ])
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.navigationBar.prefersLargeTitles = true
+        window.rootViewController = navigationController
         
         return true
     }
