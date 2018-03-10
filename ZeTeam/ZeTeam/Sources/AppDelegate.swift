@@ -1,4 +1,5 @@
 import UIKit
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,10 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window.tintColor = UIColor(named: "teal")
         
-        let viewController = TeamsListViewController(teams: [
+        let initialTeams = [
             Team(name: "Mobile"),
             Team(name: "Site Reliability Engineering"),
-            ])
+            ]
+        
+        let laterTeams = [
+            Team(name: "Mobile"),
+            Team(name: "Cloud Computing"),
+            ]
+        
+        let teams = Observable.just(laterTeams)
+            .delay(3, scheduler: MainScheduler.instance)
+            .startWith(initialTeams)
+        
+        let viewController = TeamsListViewController(teams: teams)
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController

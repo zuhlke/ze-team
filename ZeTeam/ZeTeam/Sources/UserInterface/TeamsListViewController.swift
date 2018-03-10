@@ -1,14 +1,24 @@
 import UIKit
+import RxSwift
 
 final class TeamsListViewController: UITableViewController {
     
-    private let teams: [Team]
     private let cellReuseIdentifier = UUID().uuidString
+    private let bag = DisposeBag()
     
-    init(teams: [Team]) {
-        self.teams = teams
+    private var teams: [Team] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    init(teams: Observable<[Team]>) {
+        self.teams = []
         super.init(nibName: nil, bundle: nil)
         self.title = "Teams"
+        teams.subscribe(onNext: { [weak self] teams in
+            self?.teams = teams
+        }).disposed(by: bag)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -20,6 +30,7 @@ final class TeamsListViewController: UITableViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         tableView.allowsSelection = false
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
