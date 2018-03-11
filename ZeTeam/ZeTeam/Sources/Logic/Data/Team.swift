@@ -1,5 +1,5 @@
 import Foundation
 
-struct Team: Equatable {
+struct Team: Equatable, Codable {
     var name: String
 }

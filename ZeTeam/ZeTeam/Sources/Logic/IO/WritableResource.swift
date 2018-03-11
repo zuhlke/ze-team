@@ -3,7 +3,7 @@ import RxSwift
 
 protocol WritableResource {
     
-    func read() -> Observable<Data?>
+    var data: Observable<Data?> { get }
     
     func write(_ data: Data) -> Observable<Void>
     
