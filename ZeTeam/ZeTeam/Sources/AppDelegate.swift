@@ -13,19 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window.tintColor = UIColor(named: "teal")
         
-        struct EmptyResource: WritableResource {
-            var data: Observable<Data?> {
-                return Observable.just(nil)
-            }
-            
-            func write(_ data: Data) {
-                
-            }
-        }
+        let teamsURL = URL.userDocuments.appendingPathComponent("teams")
         
-        let store = TeamStore(resource: EmptyResource())
-        store.add(Team(name: "Mobile"))
-        store.add(Team(name: "Site Reliability Engineering"))
+        let resource = LocalFileResource(url: teamsURL, queue: .io)
+        
+        let store = TeamStore(resource: resource)
         
         let viewController = TeamsListViewController(store: store)
         let navigationController = UINavigationController(rootViewController: viewController)
@@ -37,3 +29,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+private extension DispatchQueue {
+    
+    static let io = DispatchQueue(label: "IO")
+}
+
+private extension URL {
+    
+    static let userDocuments: URL = {
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        return URL(fileURLWithPath: path)
+    }()
+    
+}
