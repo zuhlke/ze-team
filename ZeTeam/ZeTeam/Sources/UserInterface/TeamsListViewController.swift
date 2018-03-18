@@ -21,6 +21,51 @@ final class TeamsListViewController: UITableViewController {
         store.teams.observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] teams in
             self?.teams = teams
         }).disposed(by: bag)
+        
+        self.navigationItem.rightBarButtonItem = makeCreateTeamBarButtonItem(store: store)
+    }
+    
+    private func makeCreateTeamBarButtonItem(store: TeamStore) -> UIBarButtonItem {
+        let item = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+        item.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let s = self else { return }
+            
+            let alertController = UIAlertController(
+                title: "Create a New Team",
+                message: nil,
+                preferredStyle: .alert
+            )
+            
+            alertController.addTextField(configurationHandler: { textField in
+                textField.autocapitalizationType = .words
+            })
+            
+            let textField = alertController.textFields![0]
+            
+            let name = textField.rx.text
+                .map { $0 ?? "" }
+                .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                .share(replay: 1, scope: .whileConnected)
+            
+            let create = UIAlertAction(title: "Create", style: .default, handler: { _ in
+                name.take(1).subscribe(onNext: { name in
+                    let team = Team(name: name)
+                    store.add(team)
+                }).dispose()
+            })
+            
+            name.map { !$0.isEmpty }.bind(to: create.rx.isEnabled).disposed(by: s.bag)
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+                
+            })
+            
+            alertController.addAction(create)
+            alertController.addAction(cancel)
+            
+            s.present(alertController, animated: true, completion: nil)
+        }).disposed(by: bag)
+        return item
     }
     
     required init?(coder aDecoder: NSCoder) {
