@@ -13,7 +13,7 @@ final class TeamStore {
             
             return Storage(initialTeams: initialTeams ?? [], update: { teams in
                 if let data = try? JSONEncoder().encode(Teams(teams: teams)) {
-                    _ = resource.write(data)
+                    resource.write(data)
                 }
             })
         }.share(replay: 1, scope: .forever)

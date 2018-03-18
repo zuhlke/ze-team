@@ -26,10 +26,9 @@ private final class TestResource: WritableResource {
         }
     }
     
-    func write(_ data: Data) -> Observable<Void> {
+    func write(_ data: Data) {
         writeCount += 1
         self._data = data
-        return Observable.empty()
     }
     
 }

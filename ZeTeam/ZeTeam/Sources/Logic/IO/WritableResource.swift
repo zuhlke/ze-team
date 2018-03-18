@@ -5,6 +5,6 @@ protocol WritableResource {
     
     var data: Observable<Data?> { get }
     
-    func write(_ data: Data) -> Observable<Void>
+    func write(_ data: Data)
     
 }
