@@ -1,5 +1,6 @@
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class TeamsListViewController: UITableViewController {
     
@@ -12,11 +13,12 @@ final class TeamsListViewController: UITableViewController {
         }
     }
     
-    init(teams: Observable<[Team]>) {
+    init(store: TeamStore) {
         self.teams = []
         super.init(nibName: nil, bundle: nil)
         self.title = "Teams"
-        teams.subscribe(onNext: { [weak self] teams in
+        
+        store.teams.observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] teams in
             self?.teams = teams
         }).disposed(by: bag)
     }

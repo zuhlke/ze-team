@@ -13,21 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window.tintColor = UIColor(named: "teal")
         
-        let initialTeams = [
-            Team(name: "Mobile"),
-            Team(name: "Site Reliability Engineering"),
-            ]
+        struct EmptyResource: WritableResource {
+            var data: Observable<Data?> {
+                return Observable.just(nil)
+            }
+            
+            func write(_ data: Data) {
+                
+            }
+        }
         
-        let laterTeams = [
-            Team(name: "Mobile"),
-            Team(name: "Cloud Computing"),
-            ]
+        let store = TeamStore(resource: EmptyResource())
+        store.add(Team(name: "Mobile"))
+        store.add(Team(name: "Site Reliability Engineering"))
         
-        let teams = Observable.just(laterTeams)
-            .delay(3, scheduler: MainScheduler.instance)
-            .startWith(initialTeams)
-        
-        let viewController = TeamsListViewController(teams: teams)
+        let viewController = TeamsListViewController(store: store)
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController
