@@ -33,6 +33,8 @@
 		89E39B431FC1D7860038958D /* Content in Resources */ = {isa = PBXBuildFile; fileRef = 89E39B421FC1D7860038958D /* Content */; };
 		89E39B4E1FC1DA050038958D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; };
 		89E39B4F1FC1DA050038958D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
+		89F33937205EC1FA00B888D1 /* LocalFileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F33936205EC1FA00B888D1 /* LocalFileResource.swift */; };
+		89F33939205EC2E700B888D1 /* LocalFileResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F33938205EC2E700B888D1 /* LocalFileResourceTests.swift */; };
 		8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29E6A21F50CC7900F259AE /* Bundle.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +111,8 @@
 		89C7474A1F6147FB00AB24BC /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C7474B1F6147FB00AB24BC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E39B421FC1D7860038958D /* Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Content; sourceTree = "<group>"; };
+		89F33936205EC1FA00B888D1 /* LocalFileResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileResource.swift; sourceTree = "<group>"; };
+		89F33938205EC2E700B888D1 /* LocalFileResourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileResourceTests.swift; sourceTree = "<group>"; };
 		8B29E6A21F50CC7900F259AE /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +198,7 @@
 			children = (
 				8947A43E1F2B3FF600A3E463 /* ZeTeamTests.swift */,
 				895E897B20548F2A000C374C /* TeamStoreTests.swift */,
+				89F33938205EC2E700B888D1 /* LocalFileResourceTests.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				895E897920548CEF000C374C /* WritableResource.swift */,
+				89F33936205EC1FA00B888D1 /* LocalFileResource.swift */,
 			);
 			path = IO;
 			sourceTree = "<group>";
@@ -554,6 +560,7 @@
 			files = (
 				895E896B20548023000C374C /* Team.swift in Sources */,
 				895E897420548384000C374C /* TeamsListViewController.swift in Sources */,
+				89F33937205EC1FA00B888D1 /* LocalFileResource.swift in Sources */,
 				895E897A20548CEF000C374C /* WritableResource.swift in Sources */,
 				8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */,
 				8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */,
@@ -570,6 +577,7 @@
 				895E898520549028000C374C /* Snapshot.swift in Sources */,
 				8947A43F1F2B3FF600A3E463 /* ZeTeamTests.swift in Sources */,
 				895E898420549028000C374C /* XCTestCaseObservableSnapshotsTests.swift in Sources */,
+				89F33939205EC2E700B888D1 /* LocalFileResourceTests.swift in Sources */,
 				895E898820549028000C374C /* TimeoutProvider.swift in Sources */,
 				895E898720549028000C374C /* XCTestCase.swift in Sources */,
 				895E898620549028000C374C /* SnapshotVerifier.swift in Sources */,
