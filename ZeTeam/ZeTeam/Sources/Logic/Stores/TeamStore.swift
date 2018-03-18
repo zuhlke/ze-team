@@ -24,6 +24,9 @@ final class TeamStore {
     }
     
     func add(_ team: Team) {
+        // The fact that the data loading and saving is done asynchronously is implementation detail,
+        // so the caller should be free to release the store even if in reality it still hasn’t flushed all of its write operations.
+        // That’s why we don’t bag the disposable.
         _ = _storage.subscribe(onNext: { storage in
             storage.addSubject.onNext(team)
         })
