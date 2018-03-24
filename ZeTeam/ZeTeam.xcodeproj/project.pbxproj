@@ -14,6 +14,7 @@
 		8920028A1F61485200D5D001 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8920028B1F61485200D5D001 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
 		8920028C1F61485200D5D001 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8936D6772066767C00EE616D /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936D6762066767C00EE616D /* Handle.swift */; };
 		8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4291F2B3FF600A3E463 /* AppDelegate.swift */; };
 		8947A4311F2B3FF600A3E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4301F2B3FF600A3E463 /* Assets.xcassets */; };
 		8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */; };
@@ -76,6 +77,7 @@
 		891088181F4F14AA004148A4 /* AAZuehlke-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AAZuehlke-italic.ttf"; sourceTree = "<group>"; };
 		891088191F4F14AA004148A4 /* AAZuehlke.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AAZuehlke.ttf; sourceTree = "<group>"; };
 		8910881A1F4F14AA004148A4 /* AAZuehlkeMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AAZuehlkeMedium.ttf; sourceTree = "<group>"; };
+		8936D6762066767C00EE616D /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
 		8947A4261F2B3FF600A3E463 /* ZeTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947A4291F2B3FF600A3E463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8947A4301F2B3FF600A3E463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 		895E897720548C33000C374C /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				8936D6762066767C00EE616D /* Handle.swift */,
 				895E897520548C2F000C374C /* TeamStore.swift */,
 			);
 			path = Stores;
@@ -575,6 +578,7 @@
 				895E896B20548023000C374C /* Team.swift in Sources */,
 				895E897420548384000C374C /* TeamsListViewController.swift in Sources */,
 				89F33937205EC1FA00B888D1 /* LocalFileResource.swift in Sources */,
+				8936D6772066767C00EE616D /* Handle.swift in Sources */,
 				895E897A20548CEF000C374C /* WritableResource.swift in Sources */,
 				8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */,
 				8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */,

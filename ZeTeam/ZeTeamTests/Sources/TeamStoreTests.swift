@@ -23,7 +23,7 @@ class TeamStoreTests: XCTestCase {
     func testThatTeamsListIsEmptyWhenFileIsEmpty() {
         let store = TeamStore(resource: TestResource(data: nil))
         
-        XCTAssert(snapshotsOf: store.teams, match: [
+        XCTAssert(snapshotsOf: store.contents, match: [
             .next([])
             ], options: [.doNotWaitForTermination])
     }
@@ -31,7 +31,7 @@ class TeamStoreTests: XCTestCase {
     func testThatTeamsListIsEmptyWhenFileIsCorrupt() {
         let store = TeamStore(resource: TestResource(data: "not valid data".data(using: .utf8)))
         
-        XCTAssert(snapshotsOf: store.teams, match: [
+        XCTAssert(snapshotsOf: store.contents, match: [
             .next([])
             ], options: [.doNotWaitForTermination])
     }
@@ -45,7 +45,7 @@ class TeamStoreTests: XCTestCase {
         
         teams.enumerated().forEach { index, team in
             store.add(team)
-            XCTAssert(snapshotsOf: store.teams, match: [
+            XCTAssert(snapshotsOf: store.contents, match: [
                 .next(Array(teams.prefix(index+1)))
                 ], options: [.doNotWaitForTermination])
         }
@@ -62,7 +62,7 @@ class TeamStoreTests: XCTestCase {
         
         let store2 = TeamStore(resource: resource)
         
-        XCTAssert(snapshotsOf: store2.teams, match: [
+        XCTAssert(snapshotsOf: store2.contents, match: [
             .next(teams)
             ], options: [.doNotWaitForTermination])
     }
@@ -93,6 +93,13 @@ class TeamStoreTests: XCTestCase {
         XCTAssertNotNil(resource.wroteData)
     }
     
+}
+
+private extension TeamStore {
+    
+    var contents: Observable<[Team]> {
+        return teams.map { $0.map { $0.content } }
+    }
 }
 
 private final class TestResource: WritableResource {

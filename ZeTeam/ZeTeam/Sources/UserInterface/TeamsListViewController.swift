@@ -19,7 +19,7 @@ final class TeamsListViewController: UITableViewController {
         self.title = "Teams"
         
         store.teams.observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] teams in
-            self?.teams = teams
+            self?.teams = teams.map { $0.content }
         }).disposed(by: bag)
         
         self.navigationItem.rightBarButtonItem = makeCreateTeamBarButtonItem(store: store)

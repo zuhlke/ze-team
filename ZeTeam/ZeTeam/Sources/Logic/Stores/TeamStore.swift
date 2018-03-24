@@ -3,10 +3,10 @@ import RxSwift
 
 final class TeamStore {
     
-    private let _storage: Observable<Storage>
+    private let storage: Observable<Storage>
     
     init(resource: WritableResource) {
-        _storage = resource.data.map { data in
+        storage = resource.data.map { data in
             let initialTeams = data.flatMap { data in
                 return try? JSONDecoder().decode(Teams.self, from: data).teams
             }
@@ -19,25 +19,25 @@ final class TeamStore {
         }.share(replay: 1, scope: .forever)
     }
     
-    var teams: Observable<[Team]> {
-        return _storage.flatMapLatest { $0.teams }
+    var teams: Observable<[Handle<Team>]> {
+        return storage.flatMapLatest { $0.teams }
     }
     
     func add(_ team: Team) {
         // The fact that the data loading and saving is done asynchronously is implementation detail,
         // so the caller should be free to release the store even if in reality it still hasn’t flushed all of its write operations.
         // That’s why we don’t bag the disposable.
-        _ = _storage.subscribe(onNext: { storage in
-            storage.addSubject.onNext(team)
+        _ = storage.subscribe(onNext: { storage in
+            storage.addSubject.onNext(Handle(content: team))
         })
     }
     
     private struct Storage {
-        let teams: Observable<[Team]>
-        let addSubject = PublishSubject<Team>()
+        let teams: Observable<[Handle<Team>]>
+        let addSubject = PublishSubject<Handle<Team>>()
         let bag = DisposeBag()
         
-        init(initialTeams: [Team], update: @escaping ([Team]) -> Void) {
+        init(initialTeams: [Handle<Team>], update: @escaping ([Handle<Team>]) -> Void) {
             teams = addSubject
                 .scan(initialTeams) { teams, team in
                     var current = teams
@@ -53,7 +53,7 @@ final class TeamStore {
     }
     
     private struct Teams: Codable {
-        var teams: [Team]
+        var teams: [Handle<Team>]
     }
     
 }
