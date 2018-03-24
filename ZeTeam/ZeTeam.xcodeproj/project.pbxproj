@@ -15,6 +15,8 @@
 		8920028B1F61485200D5D001 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
 		8920028C1F61485200D5D001 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8936D6772066767C00EE616D /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936D6762066767C00EE616D /* Handle.swift */; };
+		8936D6792066A6A200EE616D /* SequentialIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936D6782066A6A200EE616D /* SequentialIdentifier.swift */; };
+		8936D67B2066A8EC00EE616D /* SequentialIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936D67A2066A8EC00EE616D /* SequentialIdentifierTests.swift */; };
 		8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4291F2B3FF600A3E463 /* AppDelegate.swift */; };
 		8947A4311F2B3FF600A3E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4301F2B3FF600A3E463 /* Assets.xcassets */; };
 		8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */; };
@@ -78,6 +80,8 @@
 		891088191F4F14AA004148A4 /* AAZuehlke.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AAZuehlke.ttf; sourceTree = "<group>"; };
 		8910881A1F4F14AA004148A4 /* AAZuehlkeMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AAZuehlkeMedium.ttf; sourceTree = "<group>"; };
 		8936D6762066767C00EE616D /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
+		8936D6782066A6A200EE616D /* SequentialIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialIdentifier.swift; sourceTree = "<group>"; };
+		8936D67A2066A8EC00EE616D /* SequentialIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialIdentifierTests.swift; sourceTree = "<group>"; };
 		8947A4261F2B3FF600A3E463 /* ZeTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947A4291F2B3FF600A3E463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8947A4301F2B3FF600A3E463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				8947A43E1F2B3FF600A3E463 /* ZeTeamTests.swift */,
+				8936D67A2066A8EC00EE616D /* SequentialIdentifierTests.swift */,
 				895E897B20548F2A000C374C /* TeamStoreTests.swift */,
 				89F33938205EC2E700B888D1 /* LocalFileResourceTests.swift */,
 			);
@@ -326,6 +331,7 @@
 		895E897720548C33000C374C /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				8936D6782066A6A200EE616D /* SequentialIdentifier.swift */,
 				8936D6762066767C00EE616D /* Handle.swift */,
 				895E897520548C2F000C374C /* TeamStore.swift */,
 			);
@@ -578,6 +584,7 @@
 				895E896B20548023000C374C /* Team.swift in Sources */,
 				895E897420548384000C374C /* TeamsListViewController.swift in Sources */,
 				89F33937205EC1FA00B888D1 /* LocalFileResource.swift in Sources */,
+				8936D6792066A6A200EE616D /* SequentialIdentifier.swift in Sources */,
 				8936D6772066767C00EE616D /* Handle.swift in Sources */,
 				895E897A20548CEF000C374C /* WritableResource.swift in Sources */,
 				8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */,
@@ -595,6 +602,7 @@
 				895E898520549028000C374C /* Snapshot.swift in Sources */,
 				8947A43F1F2B3FF600A3E463 /* ZeTeamTests.swift in Sources */,
 				895E898420549028000C374C /* XCTestCaseObservableSnapshotsTests.swift in Sources */,
+				8936D67B2066A8EC00EE616D /* SequentialIdentifierTests.swift in Sources */,
 				89F33939205EC2E700B888D1 /* LocalFileResourceTests.swift in Sources */,
 				895E898820549028000C374C /* TimeoutProvider.swift in Sources */,
 				895E898720549028000C374C /* XCTestCase.swift in Sources */,
