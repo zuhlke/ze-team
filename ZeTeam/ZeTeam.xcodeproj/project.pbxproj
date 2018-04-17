@@ -21,6 +21,8 @@
 		894460372085EE6E0049667E /* Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894460352085EE590049667E /* Support.framework */; };
 		894460382085EE720049667E /* Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894460352085EE590049667E /* Support.framework */; };
 		8944603A2085EE810049667E /* TestingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894460392085EE810049667E /* TestingSupport.framework */; };
+		8944603B2085EFA00049667E /* Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894460352085EE590049667E /* Support.framework */; };
+		8944603C2085EFA00049667E /* Support.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 894460352085EE590049667E /* Support.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4291F2B3FF600A3E463 /* AppDelegate.swift */; };
 		8947A4311F2B3FF600A3E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4301F2B3FF600A3E463 /* Assets.xcassets */; };
 		8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */; };
@@ -72,6 +74,7 @@
 			files = (
 				8920028C1F61485200D5D001 /* RxSwift.framework in Embed Frameworks */,
 				8920028A1F61485200D5D001 /* RxCocoa.framework in Embed Frameworks */,
+				8944603C2085EFA00049667E /* Support.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,7 +89,7 @@
 		8936D6762066767C00EE616D /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
 		8936D6782066A6A200EE616D /* SequentialIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialIdentifier.swift; sourceTree = "<group>"; };
 		8936D67A2066A8EC00EE616D /* SequentialIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialIdentifierTests.swift; sourceTree = "<group>"; };
-		894460352085EE590049667E /* Support.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Support.framework; path = "../../../Library/Developer/Xcode/DerivedData/ZeTeam-chphzcxctwojfagnhbsxojhsiuzw/Build/Products/Debug/Support.framework"; sourceTree = "<group>"; };
+		894460352085EE590049667E /* Support.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Support.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894460392085EE810049667E /* TestingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947A4261F2B3FF600A3E463 /* ZeTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947A4291F2B3FF600A3E463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89A8519D205FD6EE00DE078B /* CloudKit.framework in Frameworks */,
+				8944603B2085EFA00049667E /* Support.framework in Frameworks */,
 				8920028B1F61485200D5D001 /* RxSwift.framework in Frameworks */,
 				894460362085EE6D0049667E /* Support.framework in Frameworks */,
 				892002891F61485200D5D001 /* RxCocoa.framework in Frameworks */,
@@ -675,10 +679,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */;
 			buildSettings = {
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 			};
 			name = Debug;
 		};
@@ -686,10 +686,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */;
 			buildSettings = {
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 			};
 			name = Release;
 		};

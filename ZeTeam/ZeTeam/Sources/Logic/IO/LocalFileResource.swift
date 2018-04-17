@@ -1,12 +1,13 @@
 import Foundation
 import RxSwift
+import Support
 
 struct LocalFileResource: WritableResource {
     private var url: URL
     private var queue: DispatchQueue
     
     init(url: URL, queue: DispatchQueue) {
-        precondition(url.isFileURL)
+        Thread.precondition(url.isFileURL, "url must be for a file")
         self.url = url
         self.queue = queue
     }

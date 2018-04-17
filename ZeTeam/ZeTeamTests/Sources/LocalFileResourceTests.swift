@@ -1,5 +1,6 @@
 import Foundation
 import XCTest
+import TestingSupport
 @testable import ZeTeam
 
 class LocalFileResourceTests: XCTestCase {
@@ -18,6 +19,13 @@ class LocalFileResourceTests: XCTestCase {
         try? FileManager().removeItem(at: url)
         
         super.tearDown()
+    }
+    
+    func testThatInitTrapIfURLIsNotFileURL() {
+        let url = URL(string: "http://somewhere.com")!
+        XCTAssertFatalError {
+            _ = LocalFileResource(url: url, queue: self.queue)
+        }
     }
     
     func testThatItReturnsNilIfFileIsMissing() throws {
