@@ -2,7 +2,7 @@ import XCTest
 
 class ZeTeamTests: XCTestCase {
     
-    #if SIMULATOR
+    #if targetEnvironment(simulator)
     func testThatProjectFileHasNoEmbeddedBuildConfigurations() {
         guard let projectFilePath = Bundle(for: ZeTeamTests.self).infoDictionary?["projectFilePath"] as? String else {
             XCTFail("The project file path should be specified in the info.plist file.")

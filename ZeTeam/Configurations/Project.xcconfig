@@ -11,8 +11,6 @@ CODE_SIGN_STYLE = Automatic
 
 SWIFT_VERSION = 4.0
 
-SWIFT_ACTIVE_COMPILATION_CONDITIONS[sdk=iphonesimulator*] = SIMULATOR
-
 //:completeSettings = none
 
 // Identity
