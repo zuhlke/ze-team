@@ -29,7 +29,7 @@
 		8944605B2086090E0049667E /* RemoteStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 894460452086090D0049667E /* RemoteStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89446069208622F80049667E /* RemoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89446068208622F80049667E /* RemoteStore.swift */; };
 		8944606D208632440049667E /* RecordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944606C208632440049667E /* RecordProtocol.swift */; };
-		8944607320863A530049667E /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944607220863A530049667E /* Action.swift */; };
+		8944607520864AAB0049667E /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944607420864AAB0049667E /* Action.swift */; };
 		8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4291F2B3FF600A3E463 /* AppDelegate.swift */; };
 		8947A4311F2B3FF600A3E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4301F2B3FF600A3E463 /* Assets.xcassets */; };
 		8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */; };
@@ -129,7 +129,7 @@
 		894460672086227B0049667E /* RemoteStorageTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RemoteStorageTests.xcconfig; sourceTree = "<group>"; };
 		89446068208622F80049667E /* RemoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteStore.swift; sourceTree = "<group>"; };
 		8944606C208632440049667E /* RecordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProtocol.swift; sourceTree = "<group>"; };
-		8944607220863A530049667E /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Action.swift; path = ../../../../../../.Trash/Action.swift; sourceTree = "<group>"; };
+		8944607420864AAB0049667E /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		8947A4261F2B3FF600A3E463 /* ZeTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947A4291F2B3FF600A3E463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8947A4301F2B3FF600A3E463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -375,7 +375,7 @@
 		8944607120863A3F0049667E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8944607220863A530049667E /* Action.swift */,
+				8944607420864AAB0049667E /* Action.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -810,7 +810,7 @@
 				895E896B20548023000C374C /* Team.swift in Sources */,
 				895E897420548384000C374C /* TeamsListViewController.swift in Sources */,
 				89F33937205EC1FA00B888D1 /* LocalFileResource.swift in Sources */,
-				8944607320863A530049667E /* Action.swift in Sources */,
+				8944607520864AAB0049667E /* Action.swift in Sources */,
 				8936D6792066A6A200EE616D /* SequentialIdentifier.swift in Sources */,
 				8936D6772066767C00EE616D /* Handle.swift in Sources */,
 				895E897A20548CEF000C374C /* WritableResource.swift in Sources */,
@@ -891,15 +891,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 894460662086220B0049667E /* RemoteStorage.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -907,14 +898,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 894460662086220B0049667E /* RemoteStorage.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -922,7 +905,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 894460672086227B0049667E /* RemoteStorageTests.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 			};
 			name = Debug;
 		};
@@ -930,7 +912,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 894460672086227B0049667E /* RemoteStorageTests.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 			};
 			name = Release;
 		};
@@ -952,7 +933,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 			};
 			name = Debug;
 		};
@@ -960,7 +940,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 			};
 			name = Release;
 		};

@@ -93,6 +93,112 @@ class TeamStoreTests: XCTestCase {
         XCTAssertNotNil(resource.wroteData)
     }
     
+    func testDeletingAcrossSerialization() {
+        var teams = (0..<4).map {
+            return Team(name: "\($0)")
+        }
+        
+        let resource = TestResource(data: nil)
+        let store = TeamStore(resource: resource)
+        
+        teams.forEach(store.add)
+        
+        let indexToDelete = 2
+        store.teams.take(1).subscribe(onNext: { teamHandles in
+            teamHandles[indexToDelete].delete()
+        }).dispose()
+        
+        teams.remove(at: indexToDelete)
+        
+        let store2 = TeamStore(resource: resource)
+        
+        XCTAssert(snapshotsOf: store2.contents, match: [
+            .next(teams)
+            ], options: [.doNotWaitForTermination])
+    }
+    
+    func testDeletingTeams() {
+        var teams = (0..<4).map {
+            return Team(name: "\($0)")
+        }
+        
+        let store = TeamStore(resource: TestResource(data: nil))
+        
+        teams.forEach(store.add)
+        
+        let indexToDelete = 2
+        store.teams.take(1).subscribe(onNext: { teamHandles in
+            teamHandles[indexToDelete].delete()
+        }).dispose()
+        
+        teams.remove(at: indexToDelete)
+        
+        XCTAssert(snapshotsOf: store.contents, match: [
+            .next(teams)
+            ], options: [.doNotWaitForTermination])
+    }
+    
+    func testDeletingTeamASecondTypeIsNoOp() {
+        var teams = (0..<4).map {
+            return Team(name: "\($0)")
+        }
+        
+        let store = TeamStore(resource: TestResource(data: nil))
+        
+        teams.forEach(store.add)
+        
+        let indexToDelete = 2
+        var teamToDelete: Handle<Team>?
+        store.teams.take(1).subscribe(onNext: { teamHandles in
+            teamToDelete = teamHandles[indexToDelete]
+            teamToDelete?.delete()
+        }).dispose()
+        
+        teams.remove(at: indexToDelete)
+        
+        XCTAssert(snapshotsOf: store.contents, match: [
+            .next(teams)
+            ], options: [.doNotWaitForTermination])
+        
+        teamToDelete?.delete()
+        
+        XCTAssert(snapshotsOf: store.contents, match: [
+            .next(teams)
+            ], options: [.doNotWaitForTermination])
+    }
+    
+    func testDeletingTeamASecondTypeIsNoOpEvenAfterANewInsert() {
+        var teams = (0..<4).map {
+            return Team(name: "\($0)")
+        }
+        
+        let store = TeamStore(resource: TestResource(data: nil))
+        
+        teams.forEach(store.add)
+        
+        let indexToDelete = 2
+        var teamToDelete: Handle<Team>?
+        store.teams.take(1).subscribe(onNext: { teamHandles in
+            teamToDelete = teamHandles[indexToDelete]
+            teamToDelete?.delete()
+        }).dispose()
+        
+        teams.remove(at: indexToDelete)
+        
+        XCTAssert(snapshotsOf: store.contents, match: [
+            .next(teams)
+            ], options: [.doNotWaitForTermination])
+        
+        let newTeam = Team(name: "5")
+        teams.append(newTeam)
+        store.add(newTeam)
+        teamToDelete?.delete()
+        
+        XCTAssert(snapshotsOf: store.contents, match: [
+            .next(teams)
+            ], options: [.doNotWaitForTermination])
+    }
+    
 }
 
 private extension TeamStore {
