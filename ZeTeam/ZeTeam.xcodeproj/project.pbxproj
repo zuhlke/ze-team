@@ -27,7 +27,8 @@
 		894460552086090E0049667E /* RemoteStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894460542086090E0049667E /* RemoteStorageTests.swift */; };
 		8944605A2086090E0049667E /* RemoteStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894460452086090D0049667E /* RemoteStorage.framework */; };
 		8944605B2086090E0049667E /* RemoteStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 894460452086090D0049667E /* RemoteStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		89446069208622F80049667E /* RemoteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89446068208622F80049667E /* RemoteStorage.swift */; };
+		89446069208622F80049667E /* RemoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89446068208622F80049667E /* RemoteStore.swift */; };
+		8944606D208632440049667E /* RecordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944606C208632440049667E /* RecordProtocol.swift */; };
 		8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4291F2B3FF600A3E463 /* AppDelegate.swift */; };
 		8947A4311F2B3FF600A3E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4301F2B3FF600A3E463 /* Assets.xcassets */; };
 		8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */; };
@@ -125,7 +126,8 @@
 		894460562086090E0049667E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894460662086220B0049667E /* RemoteStorage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RemoteStorage.xcconfig; sourceTree = "<group>"; };
 		894460672086227B0049667E /* RemoteStorageTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RemoteStorageTests.xcconfig; sourceTree = "<group>"; };
-		89446068208622F80049667E /* RemoteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteStorage.swift; sourceTree = "<group>"; };
+		89446068208622F80049667E /* RemoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteStore.swift; sourceTree = "<group>"; };
+		8944606C208632440049667E /* RecordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProtocol.swift; sourceTree = "<group>"; };
 		8947A4261F2B3FF600A3E463 /* ZeTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947A4291F2B3FF600A3E463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8947A4301F2B3FF600A3E463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -361,7 +363,8 @@
 		894460652086218D0049667E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				89446068208622F80049667E /* RemoteStorage.swift */,
+				8944606C208632440049667E /* RecordProtocol.swift */,
+				89446068208622F80049667E /* RemoteStore.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -776,7 +779,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89446069208622F80049667E /* RemoteStorage.swift in Sources */,
+				8944606D208632440049667E /* RecordProtocol.swift in Sources */,
+				89446069208622F80049667E /* RemoteStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
