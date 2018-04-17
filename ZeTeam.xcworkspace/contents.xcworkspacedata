@@ -11,6 +11,9 @@
       location = "container:"
       name = "Dependencies">
       <FileRef
+         location = "group:Carthage/Checkouts/Support/Support/Support.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Carthage/Checkouts/RxSwift/Rx.xcodeproj">
       </FileRef>
    </Group>

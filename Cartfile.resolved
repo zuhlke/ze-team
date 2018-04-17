@@ -1,2 +1,3 @@
 git "git@bitbucket.org:zuhlke-mobile/ze-camp-assets.git" "0.3"
 github "ReactiveX/RxSwift" "4.1.2"
+github "zuhlke/Support" "80d1814f17659f23a0a5aecdd00df726810cb01c"

@@ -1,2 +1,3 @@
+git "git@github.com:zuhlke/Support.git" "master"
 git "git@bitbucket.org:zuhlke-mobile/ze-camp-assets.git" ~> 0.3
 github "ReactiveX/RxSwift" ~> 4.0
