@@ -49,6 +49,16 @@
                ReferencedContainer = "container:ZeTeam/ZeTeam.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8944604C2086090D0049667E"
+               BuildableName = "RemoteStorageTests.xctest"
+               BlueprintName = "RemoteStorageTests"
+               ReferencedContainer = "container:ZeTeam/ZeTeam.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

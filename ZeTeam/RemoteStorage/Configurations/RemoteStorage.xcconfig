@@ -1,0 +1,9 @@
+
+#include "../../Configurations/Platforms/iOS.xcconfig"
+#include "../../Configurations/Targets/Framework.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = com.zuhlke.RemoteStorage
+VERSION = 1.0
+BUILD_NUMBER = 1
+
+INFOPLIST_FILE = RemoteStorage/Configurations/Info.plist

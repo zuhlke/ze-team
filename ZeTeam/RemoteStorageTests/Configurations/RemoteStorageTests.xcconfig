@@ -1,0 +1,9 @@
+
+#include "../../Configurations/Platforms/iOS.xcconfig"
+#include "../../Configurations/Targets/Test.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = com.zuhlke.RemoteStorageTests
+VERSION = 1.0
+BUILD_NUMBER = 1
+
+INFOPLIST_FILE = RemoteStorageTests/Configurations/Info.plist

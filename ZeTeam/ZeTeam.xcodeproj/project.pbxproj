@@ -23,6 +23,11 @@
 		8944603A2085EE810049667E /* TestingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894460392085EE810049667E /* TestingSupport.framework */; };
 		8944603B2085EFA00049667E /* Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894460352085EE590049667E /* Support.framework */; };
 		8944603C2085EFA00049667E /* Support.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 894460352085EE590049667E /* Support.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8944604E2086090E0049667E /* RemoteStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894460452086090D0049667E /* RemoteStorage.framework */; };
+		894460552086090E0049667E /* RemoteStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894460542086090E0049667E /* RemoteStorageTests.swift */; };
+		8944605A2086090E0049667E /* RemoteStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894460452086090D0049667E /* RemoteStorage.framework */; };
+		8944605B2086090E0049667E /* RemoteStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 894460452086090D0049667E /* RemoteStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89446069208622F80049667E /* RemoteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89446068208622F80049667E /* RemoteStorage.swift */; };
 		8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4291F2B3FF600A3E463 /* AppDelegate.swift */; };
 		8947A4311F2B3FF600A3E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4301F2B3FF600A3E463 /* Assets.xcassets */; };
 		8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */; };
@@ -49,6 +54,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8944604F2086090E0049667E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8947A41E1F2B3FF600A3E463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 894460442086090D0049667E;
+			remoteInfo = RemoteStorage;
+		};
+		894460512086090E0049667E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8947A41E1F2B3FF600A3E463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8947A4251F2B3FF600A3E463;
+			remoteInfo = ZeTeam;
+		};
+		894460582086090E0049667E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8947A41E1F2B3FF600A3E463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 894460442086090D0049667E;
+			remoteInfo = RemoteStorage;
+		};
 		8947A43B1F2B3FF600A3E463 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8947A41E1F2B3FF600A3E463 /* Project object */;
@@ -72,6 +98,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8944605B2086090E0049667E /* RemoteStorage.framework in Embed Frameworks */,
 				8920028C1F61485200D5D001 /* RxSwift.framework in Embed Frameworks */,
 				8920028A1F61485200D5D001 /* RxCocoa.framework in Embed Frameworks */,
 				8944603C2085EFA00049667E /* Support.framework in Embed Frameworks */,
@@ -91,6 +118,14 @@
 		8936D67A2066A8EC00EE616D /* SequentialIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialIdentifierTests.swift; sourceTree = "<group>"; };
 		894460352085EE590049667E /* Support.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Support.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894460392085EE810049667E /* TestingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		894460452086090D0049667E /* RemoteStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RemoteStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		894460482086090D0049667E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8944604D2086090D0049667E /* RemoteStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		894460542086090E0049667E /* RemoteStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteStorageTests.swift; sourceTree = "<group>"; };
+		894460562086090E0049667E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		894460662086220B0049667E /* RemoteStorage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RemoteStorage.xcconfig; sourceTree = "<group>"; };
+		894460672086227B0049667E /* RemoteStorageTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RemoteStorageTests.xcconfig; sourceTree = "<group>"; };
+		89446068208622F80049667E /* RemoteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteStorage.swift; sourceTree = "<group>"; };
 		8947A4261F2B3FF600A3E463 /* ZeTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8947A4291F2B3FF600A3E463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8947A4301F2B3FF600A3E463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,12 +170,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		894460412086090D0049667E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8944604A2086090D0049667E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8944604E2086090E0049667E /* RemoteStorage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8947A4231F2B3FF600A3E463 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				89A8519D205FD6EE00DE078B /* CloudKit.framework in Frameworks */,
 				8944603B2085EFA00049667E /* Support.framework in Frameworks */,
+				8944605A2086090E0049667E /* RemoteStorage.framework in Frameworks */,
 				8920028B1F61485200D5D001 /* RxSwift.framework in Frameworks */,
 				894460362085EE6D0049667E /* Support.framework in Frameworks */,
 				892002891F61485200D5D001 /* RxCocoa.framework in Frameworks */,
@@ -263,6 +314,58 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		894460462086090D0049667E /* RemoteStorage */ = {
+			isa = PBXGroup;
+			children = (
+				894460652086218D0049667E /* Sources */,
+				894460642086217F0049667E /* Configurations */,
+			);
+			path = RemoteStorage;
+			sourceTree = "<group>";
+		};
+		894460532086090E0049667E /* RemoteStorageTests */ = {
+			isa = PBXGroup;
+			children = (
+				89446062208609230049667E /* Sources */,
+				89446063208609360049667E /* Configurations */,
+			);
+			path = RemoteStorageTests;
+			sourceTree = "<group>";
+		};
+		89446062208609230049667E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				894460542086090E0049667E /* RemoteStorageTests.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		89446063208609360049667E /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				894460562086090E0049667E /* Info.plist */,
+				894460672086227B0049667E /* RemoteStorageTests.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		894460642086217F0049667E /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				894460482086090D0049667E /* Info.plist */,
+				894460662086220B0049667E /* RemoteStorage.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		894460652086218D0049667E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				89446068208622F80049667E /* RemoteStorage.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		8947A41D1F2B3FF600A3E463 = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +374,8 @@
 				8947A4481F2B3FF600A3E463 /* ZeTeamUITests */,
 				891088151F4F14AA004148A4 /* ze-camp-assets */,
 				898366211F2B48BF007AA57A /* Configurations */,
+				894460462086090D0049667E /* RemoteStorage */,
+				894460532086090E0049667E /* RemoteStorageTests */,
 				8947A4271F2B3FF600A3E463 /* Products */,
 				89C747451F6147B700AB24BC /* Frameworks */,
 			);
@@ -282,6 +387,8 @@
 				8947A4261F2B3FF600A3E463 /* ZeTeam.app */,
 				8947A43A1F2B3FF600A3E463 /* ZeTeamTests.xctest */,
 				8947A4451F2B3FF600A3E463 /* ZeTeamUITests.xctest */,
+				894460452086090D0049667E /* RemoteStorage.framework */,
+				8944604D2086090D0049667E /* RemoteStorageTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -436,7 +543,54 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		894460422086090D0049667E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		894460442086090D0049667E /* RemoteStorage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8944605C2086090E0049667E /* Build configuration list for PBXNativeTarget "RemoteStorage" */;
+			buildPhases = (
+				894460402086090D0049667E /* Sources */,
+				894460412086090D0049667E /* Frameworks */,
+				894460422086090D0049667E /* Headers */,
+				894460432086090D0049667E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteStorage;
+			productName = RemoteStorage;
+			productReference = 894460452086090D0049667E /* RemoteStorage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8944604C2086090D0049667E /* RemoteStorageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8944605F2086090E0049667E /* Build configuration list for PBXNativeTarget "RemoteStorageTests" */;
+			buildPhases = (
+				894460492086090D0049667E /* Sources */,
+				8944604A2086090D0049667E /* Frameworks */,
+				8944604B2086090D0049667E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				894460502086090E0049667E /* PBXTargetDependency */,
+				894460522086090E0049667E /* PBXTargetDependency */,
+			);
+			name = RemoteStorageTests;
+			productName = RemoteStorageTests;
+			productReference = 8944604D2086090D0049667E /* RemoteStorageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8947A4251F2B3FF600A3E463 /* ZeTeam */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8947A44E1F2B3FF600A3E463 /* Build configuration list for PBXNativeTarget "ZeTeam" */;
@@ -450,6 +604,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				894460592086090E0049667E /* PBXTargetDependency */,
 			);
 			name = ZeTeam;
 			productName = ZeTeam;
@@ -498,10 +653,18 @@
 		8947A41E1F2B3FF600A3E463 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Zuhlke;
 				TargetAttributes = {
+					894460442086090D0049667E = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					8944604C2086090D0049667E = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 8947A4251F2B3FF600A3E463;
+					};
 					8947A4251F2B3FF600A3E463 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -541,11 +704,27 @@
 				8947A4251F2B3FF600A3E463 /* ZeTeam */,
 				8947A4391F2B3FF600A3E463 /* ZeTeamTests */,
 				8947A4441F2B3FF600A3E463 /* ZeTeamUITests */,
+				894460442086090D0049667E /* RemoteStorage */,
+				8944604C2086090D0049667E /* RemoteStorageTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		894460432086090D0049667E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8944604B2086090D0049667E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8947A4241F2B3FF600A3E463 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +772,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		894460402086090D0049667E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89446069208622F80049667E /* RemoteStorage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		894460492086090D0049667E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				894460552086090E0049667E /* RemoteStorageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8947A4221F2B3FF600A3E463 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -637,6 +832,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		894460502086090E0049667E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 894460442086090D0049667E /* RemoteStorage */;
+			targetProxy = 8944604F2086090E0049667E /* PBXContainerItemProxy */;
+		};
+		894460522086090E0049667E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8947A4251F2B3FF600A3E463 /* ZeTeam */;
+			targetProxy = 894460512086090E0049667E /* PBXContainerItemProxy */;
+		};
+		894460592086090E0049667E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 894460442086090D0049667E /* RemoteStorage */;
+			targetProxy = 894460582086090E0049667E /* PBXContainerItemProxy */;
+		};
 		8947A43C1F2B3FF600A3E463 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8947A4251F2B3FF600A3E463 /* ZeTeam */;
@@ -661,6 +871,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8944605D2086090E0049667E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 894460662086220B0049667E /* RemoteStorage.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8944605E2086090E0049667E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 894460662086220B0049667E /* RemoteStorage.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		894460602086090E0049667E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 894460672086227B0049667E /* RemoteStorageTests.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+			};
+			name = Debug;
+		};
+		894460612086090E0049667E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 894460672086227B0049667E /* RemoteStorageTests.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+			};
+			name = Release;
+		};
 		8947A44C1F2B3FF600A3E463 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 898366301F2B4B7E007AA57A /* Debug.xcconfig */;
@@ -679,6 +936,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 			};
 			name = Debug;
 		};
@@ -686,6 +944,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8983662E1F2B4A73007AA57A /* ZeTeam.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 			};
 			name = Release;
 		};
@@ -720,6 +979,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8944605C2086090E0049667E /* Build configuration list for PBXNativeTarget "RemoteStorage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8944605D2086090E0049667E /* Debug */,
+				8944605E2086090E0049667E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8944605F2086090E0049667E /* Build configuration list for PBXNativeTarget "RemoteStorageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				894460602086090E0049667E /* Debug */,
+				894460612086090E0049667E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8947A4211F2B3FF600A3E463 /* Build configuration list for PBXProject "ZeTeam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
