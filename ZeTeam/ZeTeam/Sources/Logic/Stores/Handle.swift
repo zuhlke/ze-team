@@ -1,6 +1,6 @@
 import Foundation
 
-final class Handle<Content: Codable>: Codable {
+final class Handle<Content> {
     
     let content: Content
     
