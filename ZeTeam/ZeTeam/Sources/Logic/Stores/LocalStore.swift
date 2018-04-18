@@ -1,29 +1,29 @@
 import Foundation
 import RxSwift
 
-final class TeamStore {
+final class LocalStore<Content: Codable> {
     
     private let storage: Observable<Storage>
     private let updateScheduler = ConcurrentDispatchQueueScheduler(qos: .userInitiated)
     
     init(resource: WritableResource) {
         storage = resource.data.map { data in
-            let initialTeams = data.flatMap { data in
-                return try? JSONDecoder().decode(Teams.self, from: data)
-            } ?? Teams()
+            let initialState = data.flatMap { data in
+                return try? JSONDecoder().decode(State.self, from: data)
+            } ?? State()
             
-            return Storage(initialTeams: initialTeams, update: { teams in
-                if let data = try? JSONEncoder().encode(teams) {
+            return Storage(initialState: initialState, update: { state in
+                if let data = try? JSONEncoder().encode(state) {
                     resource.write(data)
                 }
             })
         }.share(replay: 1, scope: .forever)
     }
     
-    var teams: Observable<[Handle<Team>]> {
+    var handles: Observable<[Handle<Content>]> {
         return storage.flatMapLatest { storage in
-            storage.teams.map { teams in
-                teams.contents.map { wrapper in
+            storage.state.map { contents in
+                contents.contents.map { wrapper in
                     Handle(content: wrapper.content) {
                         self.deleteTeam(withIdentifier: wrapper.identifier)
                     }
@@ -32,41 +32,41 @@ final class TeamStore {
         }
     }
     
-    func add(_ team: Team) {
-        update { teams in
-            teams.add(team)
+    func add(_ content: Content) {
+        update { contents in
+            contents.add(content)
         }
     }
     
     private func deleteTeam(withIdentifier identifier: SequentialIdentifier) {
-        update { teams in
-            teams.deleteTeam(withIdentifier: identifier)
+        update { contents in
+            contents.deleteTeam(withIdentifier: identifier)
         }
     }
     
-    private func update(using mutate: @escaping (inout Teams) -> Void) {
+    private func update(using mutate: @escaping (inout State) -> Void) {
         // The fact that the data loading and saving is done asynchronously is implementation detail,
         // so the caller should be free to release the store even if in reality it still hasn’t flushed all of its write operations.
         // That’s why we don’t bag the disposable.
         _ = storage.subscribe(onNext: { storage in
-            var teams = try! storage.teams.value()
-            mutate(&teams)
-            storage.teams.onNext(teams)
+            var contents = try! storage.state.value()
+            mutate(&contents)
+            storage.state.onNext(contents)
         })
     }
     
     private struct Storage {
-        let teams: BehaviorSubject<Teams>
+        let state: BehaviorSubject<State>
         let bag = DisposeBag()
         
-        var currentTeams: Teams {
-            return try! teams.value()
+        var currentTeams: State {
+            return try! state.value()
         }
         
-        init(initialTeams: Teams, update: @escaping (Teams) -> Void) {
-            teams = BehaviorSubject<Teams>(value: initialTeams)
+        init(initialState: State, update: @escaping (State) -> Void) {
+            state = BehaviorSubject<State>(value: initialState)
             
-            teams.skip(1)
+            state.skip(1)
                 .subscribe(onNext: update)
                 .disposed(by: bag)
         }
@@ -77,17 +77,17 @@ final class TeamStore {
         var identifier: SequentialIdentifier
     }
     
-    private struct Teams: Codable {
-        var contents: [Wrapper<Team>]
+    private struct State: Codable {
+        var contents: [Wrapper<Content>]
         var nextIdentifier: SequentialIdentifier
         
-        init(contents: [Wrapper<Team>] = [], nextIdentifier: SequentialIdentifier = .initial) {
+        init(contents: [Wrapper<Content>] = [], nextIdentifier: SequentialIdentifier = .initial) {
             self.contents = contents
             self.nextIdentifier = nextIdentifier
         }
         
-        mutating func add(_ team: Team) {
-            contents.append(Wrapper(content: team, identifier: nextIdentifier))
+        mutating func add(_ content: Content) {
+            contents.append(Wrapper(content: content, identifier: nextIdentifier))
             nextIdentifier = nextIdentifier.next()
         }
         

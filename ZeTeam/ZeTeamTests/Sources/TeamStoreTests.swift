@@ -2,46 +2,46 @@ import XCTest
 import RxSwift
 @testable import ZeTeam
 
-class TeamStoreTests: XCTestCase {
+class LocalStoreTests: XCTestCase {
     
     func testThatResourceIsNeverReadIfNotNecessary() {
         let resource = TestResource(data: nil)
-        _ = TeamStore(resource: resource)
+        _ = LocalStore<Team>(resource: resource)
         
         XCTAssertEqual(resource.readCount, 0)
     }
     
     func testThatResourceIsReadAtMostOnce() {
         let resource = TestResource(data: nil)
-        let store = TeamStore(resource: resource)
-        _ = store.teams.subscribe()
-        _ = store.teams.subscribe()
+        let store = LocalStore<Team>(resource: resource)
+        _ = store.handles.subscribe()
+        _ = store.handles.subscribe()
         
         XCTAssertEqual(resource.readCount, 1)
     }
     
-    func testThatTeamsListIsEmptyWhenFileIsEmpty() {
-        let store = TeamStore(resource: TestResource(data: nil))
+    func testThatContentsListIsEmptyWhenFileIsEmpty() {
+        let store = LocalStore<Team>(resource: TestResource(data: nil))
         
         XCTAssert(snapshotsOf: store.contents, match: [
             .next([])
             ], options: [.doNotWaitForTermination])
     }
     
-    func testThatTeamsListIsEmptyWhenFileIsCorrupt() {
-        let store = TeamStore(resource: TestResource(data: "not valid data".data(using: .utf8)))
+    func testThatContentsListIsEmptyWhenFileIsCorrupt() {
+        let store = LocalStore<Team>(resource: TestResource(data: "not valid data".data(using: .utf8)))
         
         XCTAssert(snapshotsOf: store.contents, match: [
             .next([])
             ], options: [.doNotWaitForTermination])
     }
     
-    func testThatAddedTeamsAreAppendedToTheList() {
+    func testThatAddedContentsAreAppendedToTheList() {
         let teams = (0..<4).map {
             return Team(name: "\($0)")
         }
         
-        let store = TeamStore(resource: TestResource(data: nil))
+        let store = LocalStore<Team>(resource: TestResource(data: nil))
         
         teams.enumerated().forEach { index, team in
             store.add(team)
@@ -51,16 +51,16 @@ class TeamStoreTests: XCTestCase {
         }
     }
     
-    func testThatAddedTeamsAreStored() {
+    func testThatAddedContentsAreStored() {
         let teams = [Team(name: "78"), Team(name: "90")]
         
         let resource = TestResource(data: nil)
         teams.forEach { team in
-            let store1 = TeamStore(resource: resource)
+            let store1 = LocalStore<Team>(resource: resource)
             store1.add(team)
         }
         
-        let store2 = TeamStore(resource: resource)
+        let store2 = LocalStore<Team>(resource: resource)
         
         XCTAssert(snapshotsOf: store2.contents, match: [
             .next(teams)
@@ -85,7 +85,7 @@ class TeamStoreTests: XCTestCase {
         let resource = Resource()
         
         do {
-            let store = TeamStore(resource: resource)
+            let store = LocalStore<Team>(resource: resource)
             store.add(Team(name: "any"))
         }
         
@@ -99,35 +99,35 @@ class TeamStoreTests: XCTestCase {
         }
         
         let resource = TestResource(data: nil)
-        let store = TeamStore(resource: resource)
+        let store = LocalStore<Team>(resource: resource)
         
         teams.forEach(store.add)
         
         let indexToDelete = 2
-        store.teams.take(1).subscribe(onNext: { teamHandles in
+        store.handles.take(1).subscribe(onNext: { teamHandles in
             teamHandles[indexToDelete].delete()
         }).dispose()
         
         teams.remove(at: indexToDelete)
         
-        let store2 = TeamStore(resource: resource)
+        let store2 = LocalStore<Team>(resource: resource)
         
         XCTAssert(snapshotsOf: store2.contents, match: [
             .next(teams)
             ], options: [.doNotWaitForTermination])
     }
     
-    func testDeletingTeams() {
+    func testDeletingContents() {
         var teams = (0..<4).map {
             return Team(name: "\($0)")
         }
         
-        let store = TeamStore(resource: TestResource(data: nil))
+        let store = LocalStore<Team>(resource: TestResource(data: nil))
         
         teams.forEach(store.add)
         
         let indexToDelete = 2
-        store.teams.take(1).subscribe(onNext: { teamHandles in
+        store.handles.take(1).subscribe(onNext: { teamHandles in
             teamHandles[indexToDelete].delete()
         }).dispose()
         
@@ -143,13 +143,13 @@ class TeamStoreTests: XCTestCase {
             return Team(name: "\($0)")
         }
         
-        let store = TeamStore(resource: TestResource(data: nil))
+        let store = LocalStore<Team>(resource: TestResource(data: nil))
         
         teams.forEach(store.add)
         
         let indexToDelete = 2
         var teamToDelete: Handle<Team>?
-        store.teams.take(1).subscribe(onNext: { teamHandles in
+        store.handles.take(1).subscribe(onNext: { teamHandles in
             teamToDelete = teamHandles[indexToDelete]
             teamToDelete?.delete()
         }).dispose()
@@ -172,13 +172,13 @@ class TeamStoreTests: XCTestCase {
             return Team(name: "\($0)")
         }
         
-        let store = TeamStore(resource: TestResource(data: nil))
+        let store = LocalStore<Team>(resource: TestResource(data: nil))
         
         teams.forEach(store.add)
         
         let indexToDelete = 2
         var teamToDelete: Handle<Team>?
-        store.teams.take(1).subscribe(onNext: { teamHandles in
+        store.handles.take(1).subscribe(onNext: { teamHandles in
             teamToDelete = teamHandles[indexToDelete]
             teamToDelete?.delete()
         }).dispose()
@@ -201,10 +201,10 @@ class TeamStoreTests: XCTestCase {
     
 }
 
-private extension TeamStore {
+private extension LocalStore {
     
-    var contents: Observable<[Team]> {
-        return teams.map { $0.map { $0.content } }
+    var contents: Observable<[Content]> {
+        return handles.map { $0.map { $0.content } }
     }
 }
 

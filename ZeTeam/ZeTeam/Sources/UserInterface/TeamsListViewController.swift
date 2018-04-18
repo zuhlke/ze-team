@@ -13,19 +13,19 @@ final class TeamsListViewController: UITableViewController {
         }
     }
     
-    init(store: TeamStore) {
+    init(store: LocalStore<Team>) {
         self.teams = []
         super.init(nibName: nil, bundle: nil)
         self.title = "Teams"
         
-        store.teams.observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] teams in
+        store.handles.observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] teams in
             self?.teams = teams.map { $0.content }
         }).disposed(by: bag)
         
         self.navigationItem.rightBarButtonItem = makeCreateTeamBarButtonItem(store: store)
     }
     
-    private func makeCreateTeamBarButtonItem(store: TeamStore) -> UIBarButtonItem {
+    private func makeCreateTeamBarButtonItem(store: LocalStore<Team>) -> UIBarButtonItem {
         let item = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
         item.rx.tap.subscribe(onNext: { [weak self] _ in
             guard let s = self else { return }

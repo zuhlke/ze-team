@@ -37,7 +37,7 @@
 		8947A44A1F2B3FF600A3E463 /* ZeTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */; };
 		895E896B20548023000C374C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E896A20548023000C374C /* Team.swift */; };
 		895E897420548384000C374C /* TeamsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897320548384000C374C /* TeamsListViewController.swift */; };
-		895E897620548C2F000C374C /* TeamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897520548C2F000C374C /* TeamStore.swift */; };
+		895E897620548C2F000C374C /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897520548C2F000C374C /* LocalStore.swift */; };
 		895E897A20548CEF000C374C /* WritableResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897920548CEF000C374C /* WritableResource.swift */; };
 		895E897C20548F2A000C374C /* TeamStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897B20548F2A000C374C /* TeamStoreTests.swift */; };
 		895E898420549028000C374C /* XCTestCaseObservableSnapshotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895E897E20549028000C374C /* XCTestCaseObservableSnapshotsTests.swift */; };
@@ -143,7 +143,7 @@
 		8947A44B1F2B3FF600A3E463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		895E896A20548023000C374C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		895E897320548384000C374C /* TeamsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListViewController.swift; sourceTree = "<group>"; };
-		895E897520548C2F000C374C /* TeamStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStore.swift; sourceTree = "<group>"; };
+		895E897520548C2F000C374C /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		895E897920548CEF000C374C /* WritableResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableResource.swift; sourceTree = "<group>"; };
 		895E897B20548F2A000C374C /* TeamStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStoreTests.swift; sourceTree = "<group>"; };
 		895E897E20549028000C374C /* XCTestCaseObservableSnapshotsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCaseObservableSnapshotsTests.swift; sourceTree = "<group>"; };
@@ -468,7 +468,7 @@
 			children = (
 				8936D6782066A6A200EE616D /* SequentialIdentifier.swift */,
 				8936D6762066767C00EE616D /* Handle.swift */,
-				895E897520548C2F000C374C /* TeamStore.swift */,
+				895E897520548C2F000C374C /* LocalStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -816,7 +816,7 @@
 				895E897A20548CEF000C374C /* WritableResource.swift in Sources */,
 				8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */,
 				8947A42A1F2B3FF600A3E463 /* AppDelegate.swift in Sources */,
-				895E897620548C2F000C374C /* TeamStore.swift in Sources */,
+				895E897620548C2F000C374C /* LocalStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

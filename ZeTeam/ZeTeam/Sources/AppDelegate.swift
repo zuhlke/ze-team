@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let resource = LocalFileResource(url: teamsURL, queue: .io)
         
-        let store = TeamStore(resource: resource)
+        let store = LocalStore<Team>(resource: resource)
         
         let viewController = TeamsListViewController(store: store)
         let navigationController = UINavigationController(rootViewController: viewController)
