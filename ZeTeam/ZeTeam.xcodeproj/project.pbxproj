@@ -235,7 +235,6 @@
 		891088151F4F14AA004148A4 /* ze-camp-assets */ = {
 			isa = PBXGroup;
 			children = (
-				8947A4301F2B3FF600A3E463 /* Assets.xcassets */,
 				891088171F4F14AA004148A4 /* Fonts */,
 			);
 			name = "ze-camp-assets";
@@ -315,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				8947A4321F2B3FF600A3E463 /* LaunchScreen.storyboard */,
+				8947A4301F2B3FF600A3E463 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
