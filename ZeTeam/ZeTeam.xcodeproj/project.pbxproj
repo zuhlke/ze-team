@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8910881B1F4F14E6004148A4 /* AAZuehlke-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 891088181F4F14AA004148A4 /* AAZuehlke-italic.ttf */; };
-		8910881C1F4F14E6004148A4 /* AAZuehlke.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 891088191F4F14AA004148A4 /* AAZuehlke.ttf */; };
-		8910881D1F4F14E6004148A4 /* AAZuehlkeMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8910881A1F4F14AA004148A4 /* AAZuehlkeMedium.ttf */; };
 		892002891F61485200D5D001 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; };
 		8920028A1F61485200D5D001 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8920028B1F61485200D5D001 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
@@ -112,9 +109,6 @@
 
 /* Begin PBXFileReference section */
 		890DCA96205FD61800B4B7C7 /* ZeTeam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZeTeam.entitlements; sourceTree = "<group>"; };
-		891088181F4F14AA004148A4 /* AAZuehlke-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AAZuehlke-italic.ttf"; sourceTree = "<group>"; };
-		891088191F4F14AA004148A4 /* AAZuehlke.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AAZuehlke.ttf; sourceTree = "<group>"; };
-		8910881A1F4F14AA004148A4 /* AAZuehlkeMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AAZuehlkeMedium.ttf; sourceTree = "<group>"; };
 		8936D6762066767C00EE616D /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
 		8936D6782066A6A200EE616D /* SequentialIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialIdentifier.swift; sourceTree = "<group>"; };
 		8936D67A2066A8EC00EE616D /* SequentialIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialIdentifierTests.swift; sourceTree = "<group>"; };
@@ -230,25 +224,6 @@
 				8B29E6A21F50CC7900F259AE /* Bundle.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		891088151F4F14AA004148A4 /* ze-camp-assets */ = {
-			isa = PBXGroup;
-			children = (
-				891088171F4F14AA004148A4 /* Fonts */,
-			);
-			name = "ze-camp-assets";
-			path = "../Carthage/Checkouts/ze-camp-assets";
-			sourceTree = "<group>";
-		};
-		891088171F4F14AA004148A4 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				891088181F4F14AA004148A4 /* AAZuehlke-italic.ttf */,
-				891088191F4F14AA004148A4 /* AAZuehlke.ttf */,
-				8910881A1F4F14AA004148A4 /* AAZuehlkeMedium.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		8926091F1F60310900DB78E1 /* Sources */ = {
@@ -386,7 +361,6 @@
 				8947A4281F2B3FF600A3E463 /* ZeTeam */,
 				8947A43D1F2B3FF600A3E463 /* ZeTeamTests */,
 				8947A4481F2B3FF600A3E463 /* ZeTeamUITests */,
-				891088151F4F14AA004148A4 /* ze-camp-assets */,
 				898366211F2B48BF007AA57A /* Configurations */,
 				894460462086090D0049667E /* RemoteStorage */,
 				894460532086090E0049667E /* RemoteStorageTests */,
@@ -743,9 +717,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8910881C1F4F14E6004148A4 /* AAZuehlke.ttf in Resources */,
-				8910881D1F4F14E6004148A4 /* AAZuehlkeMedium.ttf in Resources */,
-				8910881B1F4F14E6004148A4 /* AAZuehlke-italic.ttf in Resources */,
 				8947A4341F2B3FF600A3E463 /* LaunchScreen.storyboard in Resources */,
 				8947A4311F2B3FF600A3E463 /* Assets.xcassets in Resources */,
 			);
