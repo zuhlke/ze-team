@@ -10,6 +10,9 @@
    <FileRef
       location = "group:Scripts">
    </FileRef>
+   <FileRef
+      location = "group:Documentation">
+   </FileRef>
    <Group
       location = "container:"
       name = "Dependencies">
