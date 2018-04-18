@@ -7,19 +7,19 @@ final class TeamsListViewController: UITableViewController {
     private let cellReuseIdentifier = UUID().uuidString
     private let bag = DisposeBag()
     
-    private var teams: [Team] = [] {
+    private var teamHandles: [Handle<Team>] = [] {
         didSet {
             tableView.reloadData()
         }
     }
     
     init(store: LocalStore<Team>) {
-        self.teams = []
+        self.teamHandles = []
         super.init(nibName: nil, bundle: nil)
         self.title = "Teams"
         
         store.handles.observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] teams in
-            self?.teams = teams.map { $0.content }
+            self?.teamHandles = teams
         }).disposed(by: bag)
         
         self.navigationItem.rightBarButtonItem = makeCreateTeamBarButtonItem(store: store)
@@ -81,13 +81,24 @@ final class TeamsListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return teams.count
+        return teamHandles.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
-        cell.textLabel?.text = teams[indexPath.row].name
+        cell.textLabel?.text = teamHandles[indexPath.row].content.name
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        teamHandles[indexPath.row].delete()
+    }
 }
