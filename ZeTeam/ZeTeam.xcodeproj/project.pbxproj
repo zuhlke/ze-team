@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BD47B1520C544F100AAF7DA /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD47B1420C544F100AAF7DA /* TeamDetailViewController.swift */; };
+		4BD47B1920C54DC500AAF7DA /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD47B1820C54DC500AAF7DA /* NavigationUITests.swift */; };
+		4BD47B1B20C54DF300AAF7DA /* TeamsListViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD47B1A20C54DF300AAF7DA /* TeamsListViewControllerUITests.swift */; };
+		4BD47B1D20C54E0C00AAF7DA /* TeamDetailViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD47B1C20C54E0C00AAF7DA /* TeamDetailViewControllerUITests.swift */; };
 		892002891F61485200D5D001 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; };
 		8920028A1F61485200D5D001 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474A1F6147FB00AB24BC /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8920028B1F61485200D5D001 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7474B1F6147FB00AB24BC /* RxSwift.framework */; };
@@ -108,6 +112,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4BD47B1420C544F100AAF7DA /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
+		4BD47B1820C54DC500AAF7DA /* NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITests.swift; sourceTree = "<group>"; };
+		4BD47B1A20C54DF300AAF7DA /* TeamsListViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListViewControllerUITests.swift; sourceTree = "<group>"; };
+		4BD47B1C20C54E0C00AAF7DA /* TeamDetailViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewControllerUITests.swift; sourceTree = "<group>"; };
 		890DCA96205FD61800B4B7C7 /* ZeTeam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZeTeam.entitlements; sourceTree = "<group>"; };
 		8936D6762066767C00EE616D /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
 		8936D6782066A6A200EE616D /* SequentialIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialIdentifier.swift; sourceTree = "<group>"; };
@@ -226,6 +234,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4BD47B1620C54D6500AAF7DA /* IndividualControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BD47B1A20C54DF300AAF7DA /* TeamsListViewControllerUITests.swift */,
+				4BD47B1C20C54E0C00AAF7DA /* TeamDetailViewControllerUITests.swift */,
+			);
+			path = IndividualControllers;
+			sourceTree = "<group>";
+		};
+		4BD47B1720C54D7C00AAF7DA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4BD47B1820C54DC500AAF7DA /* NavigationUITests.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		8926091F1F60310900DB78E1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +296,8 @@
 		892609361F60320800DB78E1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4BD47B1720C54D7C00AAF7DA /* Navigation */,
+				4BD47B1620C54D6500AAF7DA /* IndividualControllers */,
 				8947A4491F2B3FF600A3E463 /* ZeTeamUITests.swift */,
 			);
 			path = Sources;
@@ -433,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				895E897320548384000C374C /* TeamsListViewController.swift */,
+				4BD47B1420C544F100AAF7DA /* TeamDetailViewController.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -655,6 +683,7 @@
 					};
 					8947A4251F2B3FF600A3E463 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -783,6 +812,7 @@
 				89F33937205EC1FA00B888D1 /* LocalFileResource.swift in Sources */,
 				8944607520864AAB0049667E /* Action.swift in Sources */,
 				8936D6792066A6A200EE616D /* SequentialIdentifier.swift in Sources */,
+				4BD47B1520C544F100AAF7DA /* TeamDetailViewController.swift in Sources */,
 				8936D6772066767C00EE616D /* Handle.swift in Sources */,
 				895E897A20548CEF000C374C /* WritableResource.swift in Sources */,
 				8B29E6A31F50CC7900F259AE /* Bundle.swift in Sources */,
@@ -813,6 +843,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8947A44A1F2B3FF600A3E463 /* ZeTeamUITests.swift in Sources */,
+				4BD47B1920C54DC500AAF7DA /* NavigationUITests.swift in Sources */,
+				4BD47B1D20C54E0C00AAF7DA /* TeamDetailViewControllerUITests.swift in Sources */,
+				4BD47B1B20C54DF300AAF7DA /* TeamsListViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

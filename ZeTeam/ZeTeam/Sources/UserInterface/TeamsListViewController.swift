@@ -27,6 +27,7 @@ final class TeamsListViewController: UITableViewController {
     
     private func makeCreateTeamBarButtonItem(store: LocalStore<Team>) -> UIBarButtonItem {
         let item = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+        item.accessibilityLabel = "add"
         item.rx.tap.subscribe(onNext: { [weak self] _ in
             guard let s = self else { return }
             
@@ -38,6 +39,7 @@ final class TeamsListViewController: UITableViewController {
             
             alertController.addTextField(configurationHandler: { textField in
                 textField.autocapitalizationType = .words
+                textField.accessibilityLabel = "team name"
             })
             
             let textField = alertController.textFields![0]
@@ -76,8 +78,7 @@ final class TeamsListViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-        tableView.allowsSelection = false
-        
+        tableView.allowsSelection = true
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,5 +101,13 @@ final class TeamsListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         teamHandles[indexPath.row].delete()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("got here!")
+        let detailVC = TeamDetailViewController()
+        let teamName = tableView.cellForRow(at: indexPath)?.textLabel?.text
+        detailVC.navigationItem.title = teamName ?? ""  + " Home Page"
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

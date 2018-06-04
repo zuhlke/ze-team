@@ -8,11 +8,4 @@ class ZeTeamUITests: XCTestCase {
         continueAfterFailure = false
         XCUIApplication().launch()
     }
-
-    func testThatTheAppShowsTheWelcomeMessage() {
-        let app = XCUIApplication()
-        
-        XCTAssertTrue(app.navigationBars["Teams"].exists)
-    }
-    
 }
