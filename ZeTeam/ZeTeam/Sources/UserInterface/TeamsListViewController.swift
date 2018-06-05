@@ -104,7 +104,6 @@ final class TeamsListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("got here!")
         let detailVC = TeamDetailViewController()
         let teamName = tableView.cellForRow(at: indexPath)?.textLabel?.text
         detailVC.navigationItem.title = teamName ?? ""  + " Home Page"
