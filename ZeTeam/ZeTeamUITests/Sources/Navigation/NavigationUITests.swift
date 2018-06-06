@@ -40,12 +40,7 @@ class NavigationUITests: XCTestCase {
         
         return application.tables.cells.element(boundBy: 0)
     }
-    
-    private func tapAddButton(){
-        let addButton = application.navigationBars.buttons["add"]
-        addButton.tap()
-    }
-    
+     
     private func clearTeam(_ cell : XCUIElement){
         cell.swipeLeft()
         cell.buttons["Delete"].tap()

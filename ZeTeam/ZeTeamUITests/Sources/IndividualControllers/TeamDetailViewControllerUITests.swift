@@ -1,6 +1,6 @@
 import XCTest
 
-class TeamDetailViewControllerUITests: XCTestCase {
+class TeamDetailViewControllerUITests: ZeTeamUITests {
     
     let application = XCUIApplication()
     let teamName = "team A";
@@ -63,8 +63,6 @@ class TeamDetailViewControllerUITests: XCTestCase {
         teamMemberCellQuery.buttons["Delete"].tap()
         
         XCTAssertFalse(teamMemberCellQuery.exists)
-        
-        runRemoveTeamTests(teamName)
     }
 
     func testDescriptionEditAndSave(){
@@ -96,10 +94,5 @@ class TeamDetailViewControllerUITests: XCTestCase {
         createButton.tap()
         
         return application.tables.cells.element(boundBy: 0)
-    }
-    
-    private func tapAddButton(){
-        let addButton = application.navigationBars.buttons["add"]
-        addButton.tap()
     }
 }
