@@ -1,36 +1,63 @@
-//
-//  TeamDetailViewControllerUITests.swift
-//  ZeTeamUITests
-//
-//  Created by Sarah Usher on 04/06/2018.
-//  Copyright © 2018 Zuhlke. All rights reserved.
-//
-
 import XCTest
 
 class TeamDetailViewControllerUITests: XCTestCase {
+    
+    let application = XCUIApplication()
         
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        application.launch()
+        removeAllTeams()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    private func removeAllTeams() {
+        var cellQuery = application.tables.cells.element(boundBy: 0)
+        while cellQuery.exists {
+            cellQuery.swipeLeft()
+            cellQuery.buttons["Delete"].tap()
+            cellQuery = application.tables.cells.element(boundBy: 0)
+        }
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testDescriptionEditAndSave(){
+        let teamName = "team A";
+        let teamElement = addTeam(teamName)
+        
+        teamElement.tap()
+        
+        let editButton = application.navigationBars.buttons["Edit"]
+        
+        XCTAssertTrue(editButton.exists)
+        XCTAssertTrue(application.staticTexts["teamDescription"].exists)
+        
+        editButton.tap()
+        
+        let saveButton = application.navigationBars.buttons["Save"]
+        
+        XCTAssertTrue(application.textViews["teamDescriptionEdit"].exists)
+        XCTAssertTrue(saveButton.exists)
+        
+        saveButton.tap()
+        
+        XCTAssertTrue(editButton.exists)
+        XCTAssertTrue(application.staticTexts["teamDescription"].exists)
     }
     
+    private func addTeam(_ teamName : String) -> XCUIElement {
+        tapAddButton()
+        
+        let createButton = application.buttons["Create"];
+        let textField = application.textFields["team name"]
+        textField.typeText(teamName)
+        
+        createButton.tap()
+        
+        return application.tables.cells.element(boundBy: 0)
+    }
+    
+    private func tapAddButton(){
+        let addButton = application.navigationBars.buttons["add"]
+        addButton.tap()
+    }
 }

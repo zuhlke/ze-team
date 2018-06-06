@@ -131,6 +131,7 @@ class TeamDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         labelDescription.text = fakeText
         //label.text = "Team Page Description"
+        labelDescription.accessibilityLabel = "teamDescription"
         
         view.addSubview(labelDescription)
         NSLayoutConstraint.activate([
@@ -142,6 +143,7 @@ class TeamDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         editableDescription = UITextView()
         editableDescription.text = fakeText
+        editableDescription.accessibilityLabel = "teamDescriptionEdit"
         editableDescription.isHidden = true
         editableDescription.translatesAutoresizingMaskIntoConstraints = false
         editableDescription.font = UIFont.systemFont(ofSize: 16)
