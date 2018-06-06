@@ -29,12 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-private extension DispatchQueue {
+
+extension DispatchQueue {
     
     static let io = DispatchQueue(label: "IO")
 }
 
-private extension URL {
+extension URL {
     
     static let userDocuments: URL = {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
