@@ -183,6 +183,7 @@ class TeamDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             })
             
             let textField = alertController.textFields![0]
+            textField.accessibilityLabel = "team member name"
             
             let name = textField.rx.text
                 .map { $0 ?? "" }
