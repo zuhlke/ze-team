@@ -2,15 +2,10 @@ import XCTest
 
 class TeamDetailViewControllerUITests: ZeTeamUITests {
     
-    let application = XCUIApplication()
     let teamName = "team A";
         
     override func setUp() {
         super.setUp()
-        continueAfterFailure = false
-        application.launch()
-        
-        removeAllTeams()
         goToTeamDeatailsPage()
     }
     

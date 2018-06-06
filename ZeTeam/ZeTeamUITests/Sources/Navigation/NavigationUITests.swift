@@ -1,13 +1,9 @@
 import XCTest
 
-class NavigationUITests: XCTestCase {
+class NavigationUITests: ZeTeamUITests {
     
-    let application = XCUIApplication()
-        
     override func setUp() {
         super.setUp()
-        continueAfterFailure = false
-        XCUIApplication().launch()
     }
     
     func testMoveToTeamDetailsWhenTappingTeamInList(){

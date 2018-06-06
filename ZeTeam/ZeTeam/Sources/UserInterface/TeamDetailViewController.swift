@@ -28,12 +28,12 @@ class TeamDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    init() {
+    init(teamName: String) {
         
         memeberHandles = []
         editableState = BehaviorSubject(value: .notEditing)
         
-        let teamsURL = URL.userDocuments.appendingPathComponent("teamMembers")
+        let teamsURL = URL.userDocuments.appendingPathComponent("teamMembers-\(teamName)")
         let resource = LocalFileResource(url: teamsURL, queue: .io)
         let store = LocalStore<TeamMember>(resource: resource)
         memberStore = store
