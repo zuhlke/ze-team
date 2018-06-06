@@ -15,7 +15,7 @@ class NavigationUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testMoveToTeamDetailsWhenTappingTeanInList(){
+    func testMoveToTeamDetailsWhenTappingTeamInList(){
         let teamName = "team A";
         let teamElement = addTeam(teamName)
         

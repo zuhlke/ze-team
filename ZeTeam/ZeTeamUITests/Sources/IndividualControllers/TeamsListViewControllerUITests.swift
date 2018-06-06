@@ -11,6 +11,7 @@ class TeamsListViewControllerUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         application.launch()
+        removeAllTeams()
     }
     
     func testTitleExists(){
@@ -63,6 +64,15 @@ class TeamsListViewControllerUITests: XCTestCase {
         
         createButton.tap()
         XCTAssertFalse(application.staticTexts["Create a New Team"].exists)
+    }
+    
+    private func removeAllTeams() {
+        var cellQuery = application.tables.cells.element(boundBy: 0)
+        while cellQuery.exists {
+            cellQuery.swipeLeft()
+            cellQuery.buttons["Delete"].tap()
+            cellQuery = application.tables.cells.element(boundBy: 0)
+        }
     }
     
     private func runRemoveTeamTests(_ teamName : String){
